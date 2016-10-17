@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="ru-RU" dir="ltr" class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>UI Формы | Верстка | (c) студия Wezom | www.wezom.com.ua</title>
+		<meta name="description" lang="ru-ru" content="">
+		<meta name="keywords" lang="ru-ru" content="студия wezom, разработка сайтов">
+		<meta name="keywords" lang="en-us" content="studio wezom, web development">
+		<meta name="author" lang="ru-ru" content="">
+		<!-- Open Graph -->
+		<meta property="og:title" content="Заголовок страницы">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="site.com">
+		<meta property="og:url" content="http://site.com/current-page">
+		<meta property="og:description" content="краткий текст (новости, товара и т.д)">
+		<!-- Touch -->
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="address=no">
+		<!--Responsive-->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="target-densitydpi=device-dpi">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!-- saved from url=(0014)about:internet -->
+		<!--[if IE]><meta http-equiv="imagetoolbar" content="no"><![endif]-->
+		<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<!-- localStorage test -->
+		<script>!function(t){function r(){var t=navigator.userAgent,r=!window.addEventListener||t.match(/(Android (2|3|4.0|4.1|4.2|4.3))|(Opera (Mini|Mobi))/)&&!t.match(/Chrome/);if(r)return!1;var e="test";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch(o){return!1}}t.localSupport=r(),t.localWrite=function(t,r){try{localStorage.setItem(t,r)}catch(e){if(e==QUOTA_EXCEEDED_ERR)return!1}}}(window);
+		</script>
+		<!-- Внешние css файлы-->
+		<link rel="stylesheet" property="stylesheet" href="css/components.css">
+		<link rel="stylesheet" property="stylesheet" href="css/style.css">
+		<link rel="stylesheet" property="stylesheet" href="css/responsive.css">
+		<!-- Внешние js файлы-->
+		<script src="js/libs.js"></script>
+		<script src="js/components.js"></script>
+		<script src="js/inits.js"></script>
+		<script src="js/validation.js"></script>
+		<!-- Favicons -->
+		<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
+		<link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="manifest.json">
+		<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="favicon.ico">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+		<meta name="msapplication-config" content="browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+	</head>
+	<body>
+		<div class="wWrapper">
+			<div id="fb-root">
+				<script>
+					(function (d, s, id) {
+						var js, fjs = d.getElementsByTagName(s)[0];
+						if (d.getElementById(id)) return;
+						js = d.createElement(s);
+						js.id = id;
+						js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.3";
+						fjs.parentNode.insertBefore(js, fjs);
+					}(document, 'script', 'facebook-jssdk'));
+				</script>
+				<script type="text/javascript">
+					(function () {
+						if (window.pluso)if (typeof window.pluso.start == "function") return;
+						if (window.ifpluso == undefined) {
+							window.ifpluso = 1;
+							var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+							s.type = 'text/javascript';
+							s.charset = 'UTF-8';
+							s.async = true;
+							s.src = ('https:' == window.location.protocol ? 'https' : 'http') + '://share.pluso.ru/pluso-like.js';
+							var h = d[g]('body')[0];
+							h.appendChild(s);
+						}
+					})();
+				</script>
+				<div class="offset-nav">
+					<ul class="offset-nav_list">
+						<li class="offset-nav_list-item"><a href="http://bolshe.com.ua" class="offset-nav_list-link">Доска обявлений</a></li>
+						<li class="offset-nav_list-item"><a href="http://windows.microsoft.com/ru-ru/windows7/record-audio-with-sound-recorder" class="offset-nav_list-link">Звукозапись</a></li>
+						<li class="offset-nav_list-item"><a href="http://www.studzona.com/teacher" class="offset-nav_list-link">Преподаватели</a></li>
+						<li class="offset-nav_list-item"><a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BC%D0%BE%D0%BD%D1%82" class="offset-nav_list-link">Ремонт</a></li>
+						<li class="offset-nav_list-item"><a href="http://13.ua/izgotovlenie-naruzhnoj-i-vnutrennej-reklamy" class="offset-nav_list-link">Изготовление</a></li>
+						<li class="offset-nav_list-item offset-nav_list-item--has-child"><a href="#" class="offset-nav_list-link">Другое</a>
+							<ul class="offset-subnav">
+								<li class="offset-subnav_item"><a href="http://prokat-arenda.com.ua/" class="offset-subnav_link">Прокат/Аренда</a></li>
+								<li class="offset-subnav_item"><a href="http://www.pravda.com.ua/rus/news/2016/04/23/7106516/?attempt=1" class="offset-subnav_link">Учебные заведения</a></li>
+							</ul>
+						</li>
+					</ul>
+					<p>Валюта:</p>
+					<div class="currency-list"><a href="#" class="currency-list_currency is-active">UAH</a><a href="#" class="currency-list_currency">RUB</a><a href="#" class="currency-list_currency">USD</a></div>
+					<p>Поиск:</p>
+					<div data-form="true" class="search-mobile wForm">
+						<div class="wFormRow">
+							<div class="wFormInput">
+								<input required class="wInput">
+							</div>
+						</div>
+						<div class="wFormRow">
+							<div class="wSubmit lupa-button"></div>
+						</div>
+					</div>
+				</div>
+				<div class="offset-overlay"></div>
+			</div>
+			<div class="page-header clearfix">
+				<div class="page-size clearfix"><a href="/" class="page-header_logo"><img src="images/logo.png" alt=""></a>
+					<ul class="main-nav clearfix">
+						<li class="main-nav_item"><a href="http://bolshe.com.ua" target="_blank" class="main-nav_link"><span class="main-nav_link-icon"><img src="images/sitemenu/ad35a6610ee9b5a311e899a035f5938b.png" alt=""></span><span class="main-nav_link-text">Доска обявлений</span></a></li>
+						<li class="main-nav_item"><a href="http://windows.microsoft.com/ru-ru/windows7/record-audio-with-sound-recorder" class="main-nav_link"><span class="main-nav_link-icon"><img src="images/sitemenu/0c833c44eb6fa96caa787998cdd197d4.png" alt=""></span><span class="main-nav_link-text">Звукозапись</span></a></li>
+						<li class="main-nav_item"><a href="http://www.studzona.com/teacher" class="main-nav_link"><span class="main-nav_link-icon"><img src="images/sitemenu/923211bcbc5637d09b4a681545290ce0.png" alt=""></span><span class="main-nav_link-text">Преподаватели</span></a></li>
+						<li class="main-nav_item"><a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BC%D0%BE%D0%BD%D1%82" class="main-nav_link"><span class="main-nav_link-icon"><img src="images/sitemenu/6f7e7e6b2d4d87912bc741fe6f9a94cb.png" alt=""></span><span class="main-nav_link-text">Ремонт</span></a></li>
+						<li class="main-nav_item"><a href="http://13.ua/izgotovlenie-naruzhnoj-i-vnutrennej-reklamy" class="main-nav_link"><span class="main-nav_link-icon"><img src="images/sitemenu/c0bc3bf3005fd429ca44a068e3e9da1c.png" alt=""></span><span class="main-nav_link-text">Изготовление</span></a></li>
+						<li class="main-nav_item main-nav_item--has-children"><a href="" class="main-nav_link"><span class="main-nav_link-icon"><img src="images/sitemenu/92ffdb55e4ac26c0b57eaf3f16036ff5.png" alt=""></span><span class="main-nav_link-text">Другое</span></a>
+							<ul class="main-subnav">
+								<li class="main-subnav_item"><a href="http://prokat-arenda.com.ua/" class="main-subnav_link">Прокат/Аренда</a></li>
+								<li class="main-subnav_item"><a href="http://www.pravda.com.ua/rus/news/2016/04/23/7106516/?attempt=1" class="main-subnav_link">Учебные заведения</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="header-user-nav">
+						<div class="currency-list"><a href="#" class="currency-list_currency is-active">UAH</a><a href="#" class="currency-list_currency">RUB</a><a href="#" class="currency-list_currency">USD</a></div>
+						<div class="personal-area-star"><a href="#"></a><span>0</span></div><a href="" data-url="hidden/enterPopup.php" class="personal-area-link popup-link">Вход / Регистрация</a>
+					</div>
+					<div class="hamburger-button"><span></span></div>
+				</div>
+			</div>
+			<!-- .wHeader -->
+			<div class="wSize">
+				<nav class="wMenu">
+					<ul>
+						<li><a href="index.html"><span>Главная</span></a>
+						</li>
+						<li class="haveSubMenu w_active"><a href="ui_text.html"><span>UI Раздел</span></a>
+							<ul>
+								<li><a href="ui_text.html"><span>UI Текстовая страница</span></a>
+								</li>
+								<li><a href="ui_elements.html"><span>UI Элементы</span></a>
+								</li>
+								<li class="w_active"><a href="ui_forms.html"><span>UI Формы</span></a>
+								</li>
+								<li><a href="ui_svg.html"><span>UI SVG Sprite</span></a>
+								</li>
+							</ul>
+						</li>
+						<li><a href="sitemap.html"><span>Карта сайта</span></a>
+						</li>
+					</ul>
+				</nav>
+				<!-- wMenu -->
+			</div>
+			<div class="wContainer">
+				<div class="wSize">
+					<div class="pageTitle">UI Формы
+					</div>
+					<div xmlns:v="http://rdf.data-vocabulary.org/#" class="breadcrumbs"><span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="/">Главная</a></span><span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="/">Личный кабинет</a></span><span typeof="v:Breadcrumb" class="curr">Личный счет</span></div>
+					<div class="wTxt w_block">
+						<h6>QA Шпаргалка</h6>
+						<p><a href="https://docs.google.com/spreadsheets/d/1apO0jw4AYDipH4n-Dbq27a_HEBO7pOTn6oUUvSyYMi8/edit#gid=865381910&amp;vpid=A1" target="_blank">Стандарт валидации.xlsx</a> отдела Тестирования.</p>
+						<p>Документация по <a href="http://verstka.vps.kherson.ua/wtpl/strukturnye-elementy-stranitsy/wform-i-vse-chto-nuzhno-o-nem-znat.html" target="_blank">wForm, и все что нужно о нем знать</a>.</p>
+					</div>
+										<div class="wTxt">
+											<h3 id="wForm_demo_required">required</h3>
+											<p><code>required</code>, <a href="#wForm_demo_digits">digits</a>, <a href="#wForm_demo_number">number</a>, <a href="#wForm_demo_min">min</a>, <a href="#wForm_demo_max">max</a>, <a href="#wForm_demo_range">range</a>, <a href="#wForm_demo_minlength">minlength</a>, <a href="#wForm_demo_maxlength">maxlength</a>, <a href="#wForm_demo_rangelength">rangelength</a>, <a href="#wForm_demo_filetype">filetype</a>, <a href="#wForm_demo_filesize">filesize</a>, <a href="#wForm_demo_filesizeEach">filesizeEach</a>, <a href="#wForm_demo_password">password</a>, <a href="#wForm_demo_equalTo">equalTo</a>, <a href="#wForm_demo_url">url</a>, <a href="#wForm_demo_email">email</a>, <a href="#wForm_demo_word">word</a>, <a href="#wForm_demo_login">login</a>, <a href="#wForm_demo_phoneUA">phoneUA</a>, <a href="#wForm_demo_or">or</a>, <a href="#wForm_demo_pattern">pattern</a>, <a href="#wForm_demo_remote">remote</a>, 
+											</p>
+										</div>
+					<div data-form="true" class="wForm wFormDef wFormPreloader w_block">
+						<div class="wFormRow">
+							<label for="demo_required_input" class="wLabel">Input Text *</label>
+							<div class="wCaption">Это поле необходимо заполнить!</div>
+							<div class="wFormInput">
+								<input class="wInput" required type="text" name="demo_required_input" id="demo_required_input" placeholder="Ваш текст">
+								<div class="inpInfo">Input Text *</div>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<label for="demo_required_select" class="wLabel">Select *</label>
+							<div class="wCaption">Этот параметр - обязателен!</div>
+							<div class="wFormInput">
+								<select class="wSelect" required name="demo_required_select" id="demo_required_select">
+									<option value="" selected disabled>Выберите пункт</option>
+									<option value="1">Пункт для выбора - 1</option>
+									<option value="2">Пункт для выбора - 2</option>
+									<option value="3">Пункт для выбора - 3</option>
+									<option value="4">Пункт для выбора - 4</option>
+								</select>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<div class="wLabel">Checkbox *</div>
+							<div class="wCaption">Этот параметр - обязателен!</div>
+							<label class="wCheck">
+								<input class="wInput" required type="checkbox" name="demo_required_checkbox"><ins>&nbsp;</ins><span>Я согласен с условиями использования и обработку моих персональных данных</span>
+							</label>
+						</div>
+						<div class="wFormRow">
+							<div class="wLabel">Radio *</div>
+							<div class="wCaption">Этот параметр - обязателен!</div>
+							<label class="wRadio">
+								<input class="wInput" required type="radio" name="demo_required_radio"><ins>&nbsp;</ins><span>Radio input</span>
+							</label>
+							<label class="wRadio">
+								<input class="wInput" type="radio" name="demo_required_radio"><ins style="background-color:#01A701;">&nbsp;</ins><span>Radio input</span>
+							</label>
+							<label class="wRadio">
+								<input class="wInput" type="radio" name="demo_required_radio"><ins style="background-color:#00f;">&nbsp;</ins><span>Radio input</span>
+							</label>
+							<label class="wRadio">
+								<input class="wInput" type="radio" name="demo_required_radio"><ins style="background-color:#f0f;">&nbsp;</ins><span>Radio input</span>
+							</label>
+						</div>
+						<div class="wFormRow w_last">
+							<button class="wSubmit wBtn w_success">Подтверждение</button>
+							<button class="wReset wBtn w_danger">Сброс</button>
+						</div>
+					</div>
+					<div class="pageTitle w_small">make required если...</div>
+					<div data-form="true" class="wForm wFormDef wFormPreloader w_block">
+						<div class="wFormRow">
+							<div class="wLabel">Make Required if :checked</div>
+							<div class="wCaption">Этот параметр - сделает обязательным к заполнению поле комментария!</div>
+							<label class="wCheck">
+								<input class="wInput" type="checkbox" name="demo_required_if_checkbox" id="demo_required_if_checkbox"><ins>&nbsp;</ins><span>Да, я хочу оставить комментарий!</span>
+							</label>
+							<div class="wFormInput">
+								<textarea class="wTextarea" name="demo_required_if_checkbox_checked" id="demo_required_if_checkbox_checked" placeholder="Ваш комментарий" data-rule-required="#demo_required_if_checkbox:checked"></textarea>
+								<div class="inpInfo">Make Required if :checked</div>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<label for="demo_required_if_input" class="wLabel">Make Required if :filled</label>
+							<div class="wCaption">Заполните это поле согласно правилу валидации, чтобы комментарий стал обязательным!</div>
+							<div class="wFormInput">
+								<input class="wInput" type="text" name="demo_required_if_input" id="demo_required_if_input" placeholder="Введите минимум 4 символа" data-rule-minlength="4">
+								<div class="inpInfo">Make Required if :filled</div>
+							</div>
+							<div class="wFormInput">
+								<textarea class="wTextarea" name="demo_required_if_input_filled" id="demo_required_if_input_filled" placeholder="Ваш комментарий" data-rule-required="#demo_required_if_input:filled"></textarea>
+								<div class="inpInfo">Make Required if :filled</div>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<label for="demo_required_if_button" class="wLabel">Make Required if :visible</label>
+							<div class="wCaption">Сделайте элемент видимым, чтобы комментарий стал обязательным!</div>
+							<div class="wFormInput">
+								<button onclick="$(this).next().stop().slideToggle(200);" class="wBtn w_info">Показать / Скрыть</button>
+								<button id="demo_required_if_button" style="display:none;" class="wBtn w_primary">Связаный элемент</button>
+							</div>
+							<div class="wFormInput">
+								<textarea class="wTextarea" name="demo_required_if_button_visible" id="demo_required_if_button_visible" placeholder="Ваш комментарий" data-rule-required="#demo_required_if_button:visible"></textarea>
+								<div class="inpInfo">Make Required if :visible</div>
+							</div>
+						</div>
+						<div class="wFormRow w_last">
+							<button class="wSubmit wBtn w_success">Подтверждение</button>
+							<button class="wReset wBtn w_danger">Сброс</button>
+						</div>
+					</div>
+										<div class="wTxt">
+											<h3 id="wForm_demo_digits">digits</h3>
+											<p><a href="#wForm_demo_required">required</a>, <code>digits</code>, <a href="#wForm_demo_number">number</a>, <a href="#wForm_demo_min">min</a>, <a href="#wForm_demo_max">max</a>, <a href="#wForm_demo_range">range</a>, <a href="#wForm_demo_minlength">minlength</a>, <a href="#wForm_demo_maxlength">maxlength</a>, <a href="#wForm_demo_rangelength">rangelength</a>, <a href="#wForm_demo_filetype">filetype</a>, <a href="#wForm_demo_filesize">filesize</a>, <a href="#wForm_demo_filesizeEach">filesizeEach</a>, <a href="#wForm_demo_password">password</a>, <a href="#wForm_demo_equalTo">equalTo</a>, <a href="#wForm_demo_url">url</a>, <a href="#wForm_demo_email">email</a>, <a href="#wForm_demo_word">word</a>, <a href="#wForm_demo_login">login</a>, <a href="#wForm_demo_phoneUA">phoneUA</a>, <a href="#wForm_demo_or">or</a>, <a href="#wForm_demo_pattern">pattern</a>, <a href="#wForm_demo_remote">remote</a>, 
+											</p>
+										</div>
+					<div data-form="true" class="wForm wFormDef wFormPreloader w_block">
+						<div class="wFormRow">
+							<label for="demo_digits_input" class="wLabel">Digits *</label>
+							<div class="wCaption">Вводите только цифры</div>
+							<div class="wFormInput">
+								<input class="wInput" required type="number" name="demo_digits_input" id="demo_digits_input" placeholder="Только цифры" data-rule-digits="true">
+								<div for="demo_digits_input" class="inpInfo">Digits *</div>
+							</div>
+						</div>
+						<div class="wFormRow w_last">
+							<button class="wSubmit wBtn w_success">Подтверждение</button>
+							<button class="wReset wBtn w_danger">Сброс</button>
+						</div>
+					</div>
+										<div class="wTxt">
+											<h3 id="wForm_demo_number">number</h3>
+											<p><a href="#wForm_demo_required">required</a>, <a href="#wForm_demo_digits">digits</a>, <code>number</code>, <a href="#wForm_demo_min">min</a>, <a href="#wForm_demo_max">max</a>, <a href="#wForm_demo_range">range</a>, <a href="#wForm_demo_minlength">minlength</a>, <a href="#wForm_demo_maxlength">maxlength</a>, <a href="#wForm_demo_rangelength">rangelength</a>, <a href="#wForm_demo_filetype">filetype</a>, <a href="#wForm_demo_filesize">filesize</a>, <a href="#wForm_demo_filesizeEach">filesizeEach</a>, <a href="#wForm_demo_password">password</a>, <a href="#wForm_demo_equalTo">equalTo</a>, <a href="#wForm_demo_url">url</a>, <a href="#wForm_demo_email">email</a>, <a href="#wForm_demo_word">word</a>, <a href="#wForm_demo_login">login</a>, <a href="#wForm_demo_phoneUA">phoneUA</a>, <a href="#wForm_demo_or">or</a>, <a href="#wForm_demo_pattern">pattern</a>, <a href="#wForm_demo_remote">remote</a>, 
+											</p>
+										</div>
+					<div data-form="true" class="wForm wFormDef wSubmitPreloader w_block">
+						<div class="wFormRow">
+							<label for="demo_number_input" class="wLabel">Number *</label>
+							<div class="wCaption">Укажите числовое значение</div>
+							<div class="wFormInput">
+								<input class="wInput" required type="tel" name="demo_number_input" id="demo_number_input" placeholder="Ваше число" data-rule-number="true">
+								<div class="inpInfo">Number *</div>
+							</div>
+						</div>
+						<div class="wFormRow w_last">
+							<button class="wSubmit wBtn w_success">Подтверждение</button>
+							<button class="wReset wBtn w_danger">Сброс</button>
+						</div>
+					</div>
+										<div class="wTxt">
+											<h3 id="wForm_demo_min">min</h3>
+											<p><a href="#wForm_demo_required">required</a>, <a href="#wForm_demo_digits">digits</a>, <a href="#wForm_demo_number">number</a>, <code>min</code>, <a href="#wForm_demo_max">max</a>, <a href="#wForm_demo_range">range</a>, <a href="#wForm_demo_minlength">minlength</a>, <a href="#wForm_demo_maxlength">maxlength</a>, <a href="#wForm_demo_rangelength">rangelength</a>, <a href="#wForm_demo_filetype">filetype</a>, <a href="#wForm_demo_filesize">filesize</a>, <a href="#wForm_demo_filesizeEach">filesizeEach</a>, <a href="#wForm_demo_password">password</a>, <a href="#wForm_demo_equalTo">equalTo</a>, <a href="#wForm_demo_url">url</a>, <a href="#wForm_demo_email">email</a>, <a href="#wForm_demo_word">word</a>, <a href="#wForm_demo_login">login</a>, <a href="#wForm_demo_phoneUA">phoneUA</a>, <a href="#wForm_demo_or">or</a>, <a href="#wForm_demo_pattern">pattern</a>, <a href="#wForm_demo_remote">remote</a>, 
+											</p>
+										</div>
+					<div data-form="true" class="wForm wFormDef wFormPreloader w_block">
+						<div class="wFormRow">
+							<label for="demo_min_input" class="wLabel">Min Input Value *</label>
+							<div class="wCaption">Минимальное значение 5.5!</div>
+							<div class="wFormInput">
+								<input class="wInput" required type="tel" name="demo_min_input" id="demo_min_input" placeholder="Ваше число" data-rule-min="5.5">
+								<div class="inpInfo">Min Input Value *</div>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<label for="demo_min_select" class="wLabel">Min Select Value *</label>
+							<div class="wCaption">Минимальное значение 25!</div>
+							<div class="wFormInput">
+								<select class="wSelect" required name="demo_min_select" id="demo_min_select" data-rule-min="25">
+									<option value="10">Value - 10</option>
+									<option value="20">Value - 20</option>
+									<option value="30">Value - 30</option>
+									<option value="40">Value - 40</option>
+								</select>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<div class="wLabel">Min Radio Value *</div>
+							<div class="wCaption">Минимальное значение 25!</div>
+							<label class="wRadio">
+								<input value="10" class="wInput" required type="radio" name="demo_min_radio" data-rule-min="25"><ins>&nbsp;</ins><span>Radio Value 10</span>
+							</label>
+							<label class="wRadio">
+								<input value="20" class="wInput" type="radio" name="demo_min_radio"><ins style="background-color:#01A701;">&nbsp;</ins><span>Radio Value 20</span>
+							</label>
+							<label class="wRadio">
+								<input value="30" class="wInput" type="radio" name="demo_min_radio"><ins style="background-color:#00f;">&nbsp;</ins><span>Radio Value 30</span>
+							</label>
+							<label class="wRadio">
+								<input value="40" class="wInput" type="radio" name="demo_min_radio"><ins style="background-color:#f0f;">&nbsp;</ins><span>Radio Value 40</span>
+							</label>
+						</div>
+						<div class="wFormRow w_last">
+							<button class="wSubmit wBtn w_success">Подтверждение</button>
+							<button class="wReset wBtn w_danger">Сброс</button>
+						</div>
+					</div>
+										<div class="wTxt">
+											<h3 id="wForm_demo_max">max</h3>
+											<p><a href="#wForm_demo_required">required</a>, <a href="#wForm_demo_digits">digits</a>, <a href="#wForm_demo_number">number</a>, <a href="#wForm_demo_min">min</a>, <code>max</code>, <a href="#wForm_demo_range">range</a>, <a href="#wForm_demo_minlength">minlength</a>, <a href="#wForm_demo_maxlength">maxlength</a>, <a href="#wForm_demo_rangelength">rangelength</a>, <a href="#wForm_demo_filetype">filetype</a>, <a href="#wForm_demo_filesize">filesize</a>, <a href="#wForm_demo_filesizeEach">filesizeEach</a>, <a href="#wForm_demo_password">password</a>, <a href="#wForm_demo_equalTo">equalTo</a>, <a href="#wForm_demo_url">url</a>, <a href="#wForm_demo_email">email</a>, <a href="#wForm_demo_word">word</a>, <a href="#wForm_demo_login">login</a>, <a href="#wForm_demo_phoneUA">phoneUA</a>, <a href="#wForm_demo_or">or</a>, <a href="#wForm_demo_pattern">pattern</a>, <a href="#wForm_demo_remote">remote</a>, 
+											</p>
+										</div>
+					<div data-form="true" class="wForm wFormDef wFormPreloader w_block">
+						<div class="wFormRow">
+							<label for="demo_max_input" class="wLabel">Max Input Value *</label>
+							<div class="wCaption">Максимальное значение -15.5!</div>
+							<div class="wFormInput">
+								<input class="wInput" required type="tel" name="demo_max_input" id="demo_max_input" placeholder="Ваше число" data-rule-max="-15.5">
+								<div class="inpInfo">Max Input Value *</div>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<label for="demo_max_select" class="wLabel">Max Select Value *</label>
+							<div class="wCaption">Максимальное значение 25!</div>
+							<div class="wFormInput">
+								<select class="wSelect" required name="demo_max_select" id="demo_max_select" data-rule-max="25">
+									<option value="10">Value - 10</option>
+									<option value="20">Value - 20</option>
+									<option value="30">Value - 30</option>
+									<option value="40">Value - 40</option>
+								</select>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<div class="wLabel">Max Radio Value *</div>
+							<div class="wCaption">Максимальное значение 25!</div>
+							<label class="wRadio">
+								<input value="10" class="wInput" required type="radio" name="demo_max_radio" data-rule-max="25"><ins>&nbsp;</ins><span>Radio Value 10</span>
+							</label>
+							<label class="wRadio">
+								<input value="20" class="wInput" type="radio" name="demo_max_radio"><ins style="background-color:#01A701;">&nbsp;</ins><span>Radio Value 20</span>
+							</label>
+							<label class="wRadio">
+								<input value="30" class="wInput" type="radio" name="demo_max_radio"><ins style="background-color:#00f;">&nbsp;</ins><span>Radio Value 30</span>
+							</label>
+							<label class="wRadio">
+								<input value="40" class="wInput" type="radio" name="demo_max_radio"><ins style="background-color:#f0f;">&nbsp;</ins><span>Radio Value 40</span>
+							</label>
+						</div>
+						<div class="wFormRow w_last">
+							<button class="wSubmit wBtn w_success">Подтверждение</button>
+							<button class="wReset wBtn w_danger">Сброс</button>
+						</div>
+					</div>
+										<div class="wTxt">
+											<h3 id="wForm_demo_range">range</h3>
+											<p><a href="#wForm_demo_required">required</a>, <a href="#wForm_demo_digits">digits</a>, <a href="#wForm_demo_number">number</a>, <a href="#wForm_demo_min">min</a>, <a href="#wForm_demo_max">max</a>, <code>range</code>, <a href="#wForm_demo_minlength">minlength</a>, <a href="#wForm_demo_maxlength">maxlength</a>, <a href="#wForm_demo_rangelength">rangelength</a>, <a href="#wForm_demo_filetype">filetype</a>, <a href="#wForm_demo_filesize">filesize</a>, <a href="#wForm_demo_filesizeEach">filesizeEach</a>, <a href="#wForm_demo_password">password</a>, <a href="#wForm_demo_equalTo">equalTo</a>, <a href="#wForm_demo_url">url</a>, <a href="#wForm_demo_email">email</a>, <a href="#wForm_demo_word">word</a>, <a href="#wForm_demo_login">login</a>, <a href="#wForm_demo_phoneUA">phoneUA</a>, <a href="#wForm_demo_or">or</a>, <a href="#wForm_demo_pattern">pattern</a>, <a href="#wForm_demo_remote">remote</a>, 
+											</p>
+										</div>
+					<div data-form="true" class="wForm wFormDef wFormPreloader w_block">
+						<div class="wFormRow">
+							<label for="demo_range_input" class="wLabel">Range Input Value *</label>
+							<div class="wCaption">Диапазог допустимого значения от -5 до 30!</div>
+							<div class="wFormInput">
+								<input class="wInput" required type="tel" name="demo_range_input" id="demo_range_input" placeholder="Ваше число" data-rule-range="[-5,30]">
+								<div class="inpInfo">Range Input Value *</div>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<label for="demo_range_select" class="wLabel">Range Select Value *</label>
+							<div class="wCaption">Диапазог допустимого значения от 20 до 40!</div>
+							<div class="wFormInput">
+								<select class="wSelect" required name="demo_range_select" id="demo_range_select" data-rule-range="[20,40]">
+									<option value="10">Value - 10</option>
+									<option value="20">Value - 20</option>
+									<option value="30">Value - 30</option>
+									<option value="40">Value - 40</option>
+									<option value="50">Value - 50</option>
+								</select>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<div class="wLabel">Range Radio Value *</div>
+							<div class="wCaption">Диапазог допустимого значения от 20 до 40!</div>
+							<label class="wRadio">
+								<input value="10" class="wInput" required type="radio" name="demo_range_radio" data-rule-range="[20,40]"><ins>&nbsp;</ins><span>Radio Value 10</span>
+							</label>
+							<label class="wRadio">
+								<input value="20" class="wInput" type="radio" name="demo_range_radio"><ins style="background-color:#01A701;">&nbsp;</ins><span>Radio Value 20</span>
+							</label>
+							<label class="wRadio">
+								<input value="30" class="wInput" type="radio" name="demo_range_radio"><ins style="background-color:#00f;">&nbsp;</ins><span>Radio Value 30</span>
+							</label>
+							<label class="wRadio">
+								<input value="40" class="wInput" type="radio" name="demo_range_radio"><ins style="background-color:#f0f;">&nbsp;</ins><span>Radio Value 40</span>
+							</label>
+							<label class="wRadio">
+								<input value="50" class="wInput" type="radio" name="demo_range_radio"><ins style="background-color:#3c3;">&nbsp;</ins><span>Radio Value 50</span>
+							</label>
+						</div>
+						<div class="wFormRow w_last">
+							<button class="wSubmit wBtn w_success">Подтверждение</button>
+							<button class="wReset wBtn w_danger">Сброс</button>
+						</div>
+					</div>
+										<div class="wTxt">
+											<h3 id="wForm_demo_minlength">minlength</h3>
+											<p><a href="#wForm_demo_required">required</a>, <a href="#wForm_demo_digits">digits</a>, <a href="#wForm_demo_number">number</a>, <a href="#wForm_demo_min">min</a>, <a href="#wForm_demo_max">max</a>, <a href="#wForm_demo_range">range</a>, <code>minlength</code>, <a href="#wForm_demo_maxlength">maxlength</a>, <a href="#wForm_demo_rangelength">rangelength</a>, <a href="#wForm_demo_filetype">filetype</a>, <a href="#wForm_demo_filesize">filesize</a>, <a href="#wForm_demo_filesizeEach">filesizeEach</a>, <a href="#wForm_demo_password">password</a>, <a href="#wForm_demo_equalTo">equalTo</a>, <a href="#wForm_demo_url">url</a>, <a href="#wForm_demo_email">email</a>, <a href="#wForm_demo_word">word</a>, <a href="#wForm_demo_login">login</a>, <a href="#wForm_demo_phoneUA">phoneUA</a>, <a href="#wForm_demo_or">or</a>, <a href="#wForm_demo_pattern">pattern</a>, <a href="#wForm_demo_remote">remote</a>, 
+											</p>
+										</div>
+					<div data-form="true" class="wForm wFormDef wFormPreloader w_block">
+						<div class="wFormRow">
+							<label for="demo_minlength_input" class="wLabel">Input Min Length *</label>
+							<div class="wCaption">Минимальное количество символов - 4</div>
+							<div class="wFormInput">
+								<input class="wInput" required type="text" name="demo_minlength_input" id="demo_minlength_input" placeholder="Ваш текст" data-rule-minlength="4">
+								<div class="inpInfo">Input Min Length *</div>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<label for="demo_minlength_textarea" class="wLabel">Textarea Min Length *</label>
+							<div class="wCaption">Минимальное количество символов - 10</div>
+							<div class="wFormInput">
+								<textarea class="wTextarea" required name="demo_minlength_textarea" id="demo_minlength_textarea" placeholder="Ваш комментарий" data-rule-minlength="10"></textarea>
+								<div class="inpInfo">Textarea Min Length *</div>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<label for="demo_minlength_select" class="wLabel">Select Min Length *</label>
+							<div class="wCaption">Выберите минимум 2 пункта!</div>
+							<div class="wFormInput">
+								<select class="wSelect" required multiple size="4" name="demo_minlength_select" id="demo_minlength_select" data-rule-minlength="2">
+									<option value="1">Пункт для выбора - 1</option>
+									<option value="2">Пункт для выбора - 2</option>
+									<option value="3">Пункт для выбора - 3</option>
+									<option value="4">Пункт для выбора - 4</option>
+								</select>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<div class="wLabel">Checkbox Min Length *</div>
+							<div class="wCaption">Выберите минимум 2 параметра!</div>
+							<label class="wCheck">
+								<input value="1" class="wInput" required type="checkbox" name="demo_minlength_checkbox" data-rule-minlength="2"><ins>&nbsp;</ins><span>CheckBox 1</span>
+							</label>
+							<label class="wCheck">
+								<input value="2" class="wInput" type="checkbox" name="demo_minlength_checkbox"><ins style="background-color:#01A701;">&nbsp;</ins><span>CheckBox 2</span>
+							</label>
+							<label class="wCheck">
+								<input value="3" class="wInput" type="checkbox" name="demo_minlength_checkbox"><ins style="background-color:#00f;">&nbsp;</ins><span>CheckBox 3</span>
+							</label>
+							<label class="wCheck">
+								<input value="4" class="wInput" type="checkbox" name="demo_minlength_checkbox"><ins style="background-color:#f0f;">&nbsp;</ins><span>CheckBox 4</span>
+							</label>
+						</div>
+						<div class="wFormRow w_last">
+							<button class="wSubmit wBtn w_success">Подтверждение</button>
+							<button class="wReset wBtn w_danger">Сброс</button>
+						</div>
+					</div>
+										<div class="wTxt">
+											<h3 id="wForm_demo_maxlength">maxlength</h3>
+											<p><a href="#wForm_demo_required">required</a>, <a href="#wForm_demo_digits">digits</a>, <a href="#wForm_demo_number">number</a>, <a href="#wForm_demo_min">min</a>, <a href="#wForm_demo_max">max</a>, <a href="#wForm_demo_range">range</a>, <a href="#wForm_demo_minlength">minlength</a>, <code>maxlength</code>, <a href="#wForm_demo_rangelength">rangelength</a>, <a href="#wForm_demo_filetype">filetype</a>, <a href="#wForm_demo_filesize">filesize</a>, <a href="#wForm_demo_filesizeEach">filesizeEach</a>, <a href="#wForm_demo_password">password</a>, <a href="#wForm_demo_equalTo">equalTo</a>, <a href="#wForm_demo_url">url</a>, <a href="#wForm_demo_email">email</a>, <a href="#wForm_demo_word">word</a>, <a href="#wForm_demo_login">login</a>, <a href="#wForm_demo_phoneUA">phoneUA</a>, <a href="#wForm_demo_or">or</a>, <a href="#wForm_demo_pattern">pattern</a>, <a href="#wForm_demo_remote">remote</a>, 
+											</p>
+										</div>
+					<div data-form="true" class="wForm wFormDef wFormPreloader w_block">
+						<div class="wFormRow">
+							<label for="demo_maxlength_input" class="wLabel">Input Max Length *</label>
+							<div class="wCaption">Максимальное количество символов - 4</div>
+							<div class="wFormInput">
+								<input class="wInput" required type="text" name="demo_maxlength_input" id="demo_maxlength_input" placeholder="Ваш текст" data-rule-maxlength="4">
+								<div class="inpInfo">Input Max Length *</div>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<label for="demo_maxlength_textarea" class="wLabel">Textarea Max Length *</label>
+							<div class="wCaption">Максимальное количество символов - 10</div>
+							<div class="wFormInput">
+								<textarea class="wTextarea" required name="demo_maxlength_textarea" id="demo_maxlength_textarea" placeholder="Ваш комментарий" data-rule-maxlength="10"></textarea>
+								<div class="inpInfo">Textarea Max Length *</div>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<label for="demo_maxlength_select" class="wLabel">Select Max Length *</label>
+							<div class="wCaption">Выберите максимум 2 пункта!</div>
+							<div class="wFormInput">
+								<select class="wSelect" required multiple size="4" name="demo_maxlength_select" id="demo_maxlength_select" data-rule-maxlength="2">
+									<option value="1">Пункт для выбора - 1</option>
+									<option value="2">Пункт для выбора - 2</option>
+									<option value="3">Пункт для выбора - 3</option>
+									<option value="4">Пункт для выбора - 4</option>
+								</select>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<div class="wLabel">Checkbox Max Length *</div>
+							<div class="wCaption">Выберите максимум 2 параметра!</div>
+							<label class="wCheck">
+								<input value="1" class="wInput" required type="checkbox" name="demo_maxlength_checkbox" data-rule-maxlength="2"><ins>&nbsp;</ins><span>CheckBox 1</span>
+							</label>
+							<label class="wCheck">
+								<input value="2" class="wInput" type="checkbox" name="demo_maxlength_checkbox"><ins style="background-color:#01A701;">&nbsp;</ins><span>CheckBox 2</span>
+							</label>
+							<label class="wCheck">
+								<input value="3" class="wInput" type="checkbox" name="demo_maxlength_checkbox"><ins style="background-color:#00f;">&nbsp;</ins><span>CheckBox 3</span>
+							</label>
+							<label class="wCheck">
+								<input value="4" class="wInput" type="checkbox" name="demo_maxlength_checkbox"><ins style="background-color:#f0f;">&nbsp;</ins><span>CheckBox 4</span>
+							</label>
+						</div>
+						<div class="wFormRow w_last">
+							<button class="wSubmit wBtn w_success">Подтверждение</button>
+							<button class="wReset wBtn w_danger">Сброс</button>
+						</div>
+					</div>
+										<div class="wTxt">
+											<h3 id="wForm_demo_rangelength">rangelength</h3>
+											<p><a href="#wForm_demo_required">required</a>, <a href="#wForm_demo_digits">digits</a>, <a href="#wForm_demo_number">number</a>, <a href="#wForm_demo_min">min</a>, <a href="#wForm_demo_max">max</a>, <a href="#wForm_demo_range">range</a>, <a href="#wForm_demo_minlength">minlength</a>, <a href="#wForm_demo_maxlength">maxlength</a>, <code>rangelength</code>, <a href="#wForm_demo_filetype">filetype</a>, <a href="#wForm_demo_filesize">filesize</a>, <a href="#wForm_demo_filesizeEach">filesizeEach</a>, <a href="#wForm_demo_password">password</a>, <a href="#wForm_demo_equalTo">equalTo</a>, <a href="#wForm_demo_url">url</a>, <a href="#wForm_demo_email">email</a>, <a href="#wForm_demo_word">word</a>, <a href="#wForm_demo_login">login</a>, <a href="#wForm_demo_phoneUA">phoneUA</a>, <a href="#wForm_demo_or">or</a>, <a href="#wForm_demo_pattern">pattern</a>, <a href="#wForm_demo_remote">remote</a>, 
+											</p>
+										</div>
+					<div data-form="true" class="wForm wFormDef wFormPreloader w_block">
+						<div class="wFormRow">
+							<label for="demo_rangelength_input" class="wLabel">Input Range Length *</label>
+							<div class="wCaption">Диапазон количества допустимых символов - от 4 до 10!</div>
+							<div class="wFormInput">
+								<input class="wInput" required type="text" name="demo_rangelength_input" id="demo_rangelength_input" placeholder="Ваш текст" data-rule-rangelength="[4,10]">
+								<div class="inpInfo">Input Range Length *</div>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<label for="demo_rangelength_textarea" class="wLabel">Textarea Range Length *</label>
+							<div class="wCaption">Диапазон количества допустимых символов - от 4 до 10!</div>
+							<div class="wFormInput">
+								<textarea class="wTextarea" required name="demo_rangelength_textarea" id="demo_rangelength_textarea" placeholder="Ваш комментарий" data-rule-rangelength="[4,10]"></textarea>
+								<div class="inpInfo">Textarea Range Length *</div>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<label for="demo_rangelength_select" class="wLabel">Select Range Length *</label>
+							<div class="wCaption">Диапазон количества допустимых пунктов - от 2 до 3!</div>
+							<div class="wFormInput">
+								<select class="wSelect" required multiple size="4" name="demo_rangelength_select" id="demo_rangelength_select" data-rule-rangelength="[2,3]">
+									<option value="1">Пункт для выбора - 1</option>
+									<option value="2">Пункт для выбора - 2</option>
+									<option value="3">Пункт для выбора - 3</option>
+									<option value="4">Пункт для выбора - 4</option>
+								</select>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<div class="wLabel">Checkbox Range Length *</div>
+							<div class="wCaption">Диапазон количества допустимых параметров - от 2 до 3!</div>
+							<label class="wCheck">
+								<input value="1" class="wInput" required type="checkbox" name="demo_rangelength_checkbox" data-rule-rangelength="[2,3]"><ins>&nbsp;</ins><span>CheckBox 1</span>
+							</label>
+							<label class="wCheck">
+								<input value="2" class="wInput" type="checkbox" name="demo_rangelength_checkbox"><ins style="background-color:#01A701;">&nbsp;</ins><span>CheckBox 2</span>
+							</label>
+							<label class="wCheck">
+								<input value="3" class="wInput" type="checkbox" name="demo_rangelength_checkbox"><ins style="background-color:#00f;">&nbsp;</ins><span>CheckBox 3</span>
+							</label>
+							<label class="wCheck">
+								<input value="4" class="wInput" type="checkbox" name="demo_rangelength_checkbox"><ins style="background-color:#f0f;">&nbsp;</ins><span>CheckBox 4</span>
+							</label>
+						</div>
+						<div class="wFormRow w_last">
+							<button class="wSubmit wBtn w_success">Подтверждение</button>
+							<button class="wReset wBtn w_danger">Сброс</button>
+						</div>
+					</div>
+										<div class="wTxt">
+											<h3 id="wForm_demo_filetype">filetype</h3>
+											<p><a href="#wForm_demo_required">required</a>, <a href="#wForm_demo_digits">digits</a>, <a href="#wForm_demo_number">number</a>, <a href="#wForm_demo_min">min</a>, <a href="#wForm_demo_max">max</a>, <a href="#wForm_demo_range">range</a>, <a href="#wForm_demo_minlength">minlength</a>, <a href="#wForm_demo_maxlength">maxlength</a>, <a href="#wForm_demo_rangelength">rangelength</a>, <code>filetype</code>, <a href="#wForm_demo_filesize">filesize</a>, <a href="#wForm_demo_filesizeEach">filesizeEach</a>, <a href="#wForm_demo_password">password</a>, <a href="#wForm_demo_equalTo">equalTo</a>, <a href="#wForm_demo_url">url</a>, <a href="#wForm_demo_email">email</a>, <a href="#wForm_demo_word">word</a>, <a href="#wForm_demo_login">login</a>, <a href="#wForm_demo_phoneUA">phoneUA</a>, <a href="#wForm_demo_or">or</a>, <a href="#wForm_demo_pattern">pattern</a>, <a href="#wForm_demo_remote">remote</a>, 
+											</p>
+										</div>
+					<div data-form="true" class="wForm wFormDef wFormPreloader w_block">
+						<div class="wFormRow">
+							<label for="demo_file_single_filetype" class="wLabel">File Type Single *</label>
+							<div class="wCaption">Допустимые расширения файлов: png, gif!</div>
+							<div class="wFormInput">
+								<input class="wFile" required type="file" name="demo_file_single_filetype" id="demo_file_single_filetype" data-rule-filetype="png|gif">
+								<label for="demo_file_single_filetype" data-label-text="[&quot;Ничего не выбрано&quot;, &quot;Выбрано: &lt;ins&gt;%files&lt;/ins&gt;&quot;]" class="wInput wFileVal"><span>Ничего не выбрано</span></label>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<label for="demo_file_multiple_filetype" class="wLabel">File Type Multiple *</label>
+							<div class="wCaption">Допустимые расширения файлов: png, gif!</div>
+							<div class="wFormInput">
+								<input class="wFile" required multiple type="file" name="demo_file_multiple_filetype" id="demo_file_multiple_filetype" data-rule-filetype="png|gif">
+								<label for="demo_file_multiple_filetype" data-label-text="[&quot;Ничего не выбрано&quot;, &quot;Выбрано файлов - %count: &lt;ins&gt;(%files)&lt;/ins&gt;&quot;]" class="wInput wFileVal"><span>Ничего не выбрано</span></label>
+							</div>
+						</div>
+						<div class="wFormRow w_last">
+							<button class="wSubmit wBtn w_success">Подтверждение</button>
+							<button class="wReset wBtn w_danger">Сброс</button>
+						</div>
+					</div>
+										<div class="wTxt">
+											<h3 id="wForm_demo_filesize">filesize</h3>
+											<p><a href="#wForm_demo_required">required</a>, <a href="#wForm_demo_digits">digits</a>, <a href="#wForm_demo_number">number</a>, <a href="#wForm_demo_min">min</a>, <a href="#wForm_demo_max">max</a>, <a href="#wForm_demo_range">range</a>, <a href="#wForm_demo_minlength">minlength</a>, <a href="#wForm_demo_maxlength">maxlength</a>, <a href="#wForm_demo_rangelength">rangelength</a>, <a href="#wForm_demo_filetype">filetype</a>, <code>filesize</code>, <a href="#wForm_demo_filesizeEach">filesizeEach</a>, <a href="#wForm_demo_password">password</a>, <a href="#wForm_demo_equalTo">equalTo</a>, <a href="#wForm_demo_url">url</a>, <a href="#wForm_demo_email">email</a>, <a href="#wForm_demo_word">word</a>, <a href="#wForm_demo_login">login</a>, <a href="#wForm_demo_phoneUA">phoneUA</a>, <a href="#wForm_demo_or">or</a>, <a href="#wForm_demo_pattern">pattern</a>, <a href="#wForm_demo_remote">remote</a>, 
+											</p>
+										</div>
+					<div data-form="true" class="wForm wFormDef wFormPreloader w_block">
+						<div class="wFormRow">
+							<label for="demo_file_single_filesize" class="wLabel">File Size Single *</label>
+							<div class="wCaption">Максимальный объем файла - 150KB!</div>
+							<div class="wFormInput">
+								<input class="wFile" required type="file" name="demo_file_single_filesize" id="demo_file_single_filesize" data-rule-filesize="150">
+								<label for="demo_file_single_filesize" class="wInput wFileVal"><span>Ничего не выбрано</span></label>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<label for="demo_file_multiple_filesize" class="wLabel">File Size Multiple *</label>
+							<div class="wCaption">Максимальный общий объем файлов - 150KB!</div>
+							<div class="wFormInput">
+								<input class="wFile" required multiple type="file" name="demo_file_multiple_filesize" id="demo_file_multiple_filesize" data-rule-filesize="150">
+								<label for="demo_file_multiple_filesize" class="wInput wFileVal"><span>Ничего не выбрано</span></label>
+							</div>
+						</div>
+						<div class="wFormRow w_last">
+							<button class="wSubmit wBtn w_success">Подтверждение</button>
+							<button class="wReset wBtn w_danger">Сброс</button>
+						</div>
+					</div>
+										<div class="wTxt">
+											<h3 id="wForm_demo_filesizeEach">filesizeEach</h3>
+											<p><a href="#wForm_demo_required">required</a>, <a href="#wForm_demo_digits">digits</a>, <a href="#wForm_demo_number">number</a>, <a href="#wForm_demo_min">min</a>, <a href="#wForm_demo_max">max</a>, <a href="#wForm_demo_range">range</a>, <a href="#wForm_demo_minlength">minlength</a>, <a href="#wForm_demo_maxlength">maxlength</a>, <a href="#wForm_demo_rangelength">rangelength</a>, <a href="#wForm_demo_filetype">filetype</a>, <a href="#wForm_demo_filesize">filesize</a>, <code>filesizeEach</code>, <a href="#wForm_demo_password">password</a>, <a href="#wForm_demo_equalTo">equalTo</a>, <a href="#wForm_demo_url">url</a>, <a href="#wForm_demo_email">email</a>, <a href="#wForm_demo_word">word</a>, <a href="#wForm_demo_login">login</a>, <a href="#wForm_demo_phoneUA">phoneUA</a>, <a href="#wForm_demo_or">or</a>, <a href="#wForm_demo_pattern">pattern</a>, <a href="#wForm_demo_remote">remote</a>, 
+											</p>
+										</div>
+					<div data-form="true" class="wForm wFormDef wFormPreloader w_block">
+						<div class="wFormRow">
+							<label for="demo_file_single_filesizeEach" class="wLabel">File SizeEach Single *</label>
+							<div class="wCaption">Максимальный объем файла - 150KB!</div>
+							<div class="wFormInput">
+								<input class="wFile" required type="file" name="demo_file_single_filesizeEach" id="demo_file_single_filesizeEach" data-rule-filesizeeach="150">
+								<label for="demo_file_single_filesizeEach" class="wInput wFileVal"><span>Ничего не выбрано</span></label>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<label for="demo_file_multiple_filesizeEach" class="wLabel">File SizeEach Multiple *</label>
+							<div class="wCaption">Максимальный объем каждого файла - 150KB!</div>
+							<div class="wFormInput">
+								<input class="wFile" required multiple type="file" name="demo_file_multiple_filesizeEach" id="demo_file_multiple_filesizeEach" data-rule-filesizeeach="150">
+								<label for="demo_file_multiple_filesizeEach" class="wInput wFileVal"><span>Ничего не выбрано</span></label>
+							</div>
+						</div>
+						<div class="wFormRow w_last">
+							<button class="wSubmit wBtn w_success">Подтверждение</button>
+							<button class="wReset wBtn w_danger">Сброс</button>
+						</div>
+					</div>
+										<div class="wTxt">
+											<h3 id="wForm_demo_password">password</h3>
+											<p><a href="#wForm_demo_required">required</a>, <a href="#wForm_demo_digits">digits</a>, <a href="#wForm_demo_number">number</a>, <a href="#wForm_demo_min">min</a>, <a href="#wForm_demo_max">max</a>, <a href="#wForm_demo_range">range</a>, <a href="#wForm_demo_minlength">minlength</a>, <a href="#wForm_demo_maxlength">maxlength</a>, <a href="#wForm_demo_rangelength">rangelength</a>, <a href="#wForm_demo_filetype">filetype</a>, <a href="#wForm_demo_filesize">filesize</a>, <a href="#wForm_demo_filesizeEach">filesizeEach</a>, <code>password</code>, <a href="#wForm_demo_equalTo">equalTo</a>, <a href="#wForm_demo_url">url</a>, <a href="#wForm_demo_email">email</a>, <a href="#wForm_demo_word">word</a>, <a href="#wForm_demo_login">login</a>, <a href="#wForm_demo_phoneUA">phoneUA</a>, <a href="#wForm_demo_or">or</a>, <a href="#wForm_demo_pattern">pattern</a>, <a href="#wForm_demo_remote">remote</a>, 
+											</p>
+										</div>
+					<div data-form="true" class="wForm wFormDef wFormPreloader w_block">
+						<div class="wFormRow">
+							<label for="demo_date_input" class="wLabel">Password *</label>
+							<div class="wCaption">Первым символом не может быть пробел</div>
+							<div class="wFormInput">
+								<input class="wInput" required type="password" name="demo_date_input" id="demo_date_input" placeholder="Укажите свой пароль" data-rule-password="true">
+								<div for="demo_date_input" class="inpInfo">Password *</div>
+							</div>
+						</div>
+						<div class="wFormRow w_last">
+							<button class="wSubmit wBtn w_success">Подтверждение</button>
+							<button class="wReset wBtn w_danger">Сброс</button>
+						</div>
+					</div>
+										<div class="wTxt">
+											<h3 id="wForm_demo_equalTo">equalTo</h3>
+											<p><a href="#wForm_demo_required">required</a>, <a href="#wForm_demo_digits">digits</a>, <a href="#wForm_demo_number">number</a>, <a href="#wForm_demo_min">min</a>, <a href="#wForm_demo_max">max</a>, <a href="#wForm_demo_range">range</a>, <a href="#wForm_demo_minlength">minlength</a>, <a href="#wForm_demo_maxlength">maxlength</a>, <a href="#wForm_demo_rangelength">rangelength</a>, <a href="#wForm_demo_filetype">filetype</a>, <a href="#wForm_demo_filesize">filesize</a>, <a href="#wForm_demo_filesizeEach">filesizeEach</a>, <a href="#wForm_demo_password">password</a>, <code>equalTo</code>, <a href="#wForm_demo_url">url</a>, <a href="#wForm_demo_email">email</a>, <a href="#wForm_demo_word">word</a>, <a href="#wForm_demo_login">login</a>, <a href="#wForm_demo_phoneUA">phoneUA</a>, <a href="#wForm_demo_or">or</a>, <a href="#wForm_demo_pattern">pattern</a>, <a href="#wForm_demo_remote">remote</a>, 
+											</p>
+										</div>
+					<div data-form="true" class="wForm wFormDef wFormPreloader w_block">
+						<div class="wFormRow">
+							<label for="demo_equalTo_password" class="wLabel">Password *</label>
+							<div class="wCaption">Новый пароль!</div>
+							<div class="wFormInput">
+								<input class="wInput" required type="password" name="demo_equalTo_password" id="demo_equalTo_password" placeholder="Ваш новый пароль" data-rule-password="true">
+								<div class="inpInfo">Password *</div>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<label for="demo_equalTo_password_to" class="wLabel">Password equalTo *</label>
+							<div class="wCaption">Повторите пароль!</div>
+							<div class="wFormInput">
+								<input class="wInput" required type="password" name="demo_equalTo_password_to" id="demo_equalTo_password_to" placeholder="Повторите ваш новый пароль" data-rule-password="true" data-rule-equalto="#demo_equalTo_password">
+								<div class="inpInfo">Password equalTo *</div>
+							</div>
+						</div>
+						<div class="wFormRow w_last">
+							<button class="wSubmit wBtn w_success">Подтверждение</button>
+							<button class="wReset wBtn w_danger">Сброс</button>
+						</div>
+					</div>
+										<div class="wTxt">
+											<h3 id="wForm_demo_url">url</h3>
+											<p><a href="#wForm_demo_required">required</a>, <a href="#wForm_demo_digits">digits</a>, <a href="#wForm_demo_number">number</a>, <a href="#wForm_demo_min">min</a>, <a href="#wForm_demo_max">max</a>, <a href="#wForm_demo_range">range</a>, <a href="#wForm_demo_minlength">minlength</a>, <a href="#wForm_demo_maxlength">maxlength</a>, <a href="#wForm_demo_rangelength">rangelength</a>, <a href="#wForm_demo_filetype">filetype</a>, <a href="#wForm_demo_filesize">filesize</a>, <a href="#wForm_demo_filesizeEach">filesizeEach</a>, <a href="#wForm_demo_password">password</a>, <a href="#wForm_demo_equalTo">equalTo</a>, <code>url</code>, <a href="#wForm_demo_email">email</a>, <a href="#wForm_demo_word">word</a>, <a href="#wForm_demo_login">login</a>, <a href="#wForm_demo_phoneUA">phoneUA</a>, <a href="#wForm_demo_or">or</a>, <a href="#wForm_demo_pattern">pattern</a>, <a href="#wForm_demo_remote">remote</a>, 
+											</p>
+										</div>
+					<div data-form="true" class="wForm wFormDef wFormPreloader w_block">
+						<div class="wFormRow">
+							<label for="demo_url_input" class="wLabel">URL *</label>
+							<div class="wCaption">URL вашего сайта!</div>
+							<div class="wFormInput">
+								<input class="wInput" required type="url" name="demo_url_input" id="demo_url_input" placeholder="Ваш сайт" data-rule-url="true">
+								<div class="inpInfo">URL *</div>
+							</div>
+						</div>
+						<div class="wFormRow w_last">
+							<button class="wSubmit wBtn w_success">Подтверждение</button>
+							<button class="wReset wBtn w_danger">Сброс</button>
+						</div>
+					</div>
+										<div class="wTxt">
+											<h3 id="wForm_demo_email">email</h3>
+											<p><a href="#wForm_demo_required">required</a>, <a href="#wForm_demo_digits">digits</a>, <a href="#wForm_demo_number">number</a>, <a href="#wForm_demo_min">min</a>, <a href="#wForm_demo_max">max</a>, <a href="#wForm_demo_range">range</a>, <a href="#wForm_demo_minlength">minlength</a>, <a href="#wForm_demo_maxlength">maxlength</a>, <a href="#wForm_demo_rangelength">rangelength</a>, <a href="#wForm_demo_filetype">filetype</a>, <a href="#wForm_demo_filesize">filesize</a>, <a href="#wForm_demo_filesizeEach">filesizeEach</a>, <a href="#wForm_demo_password">password</a>, <a href="#wForm_demo_equalTo">equalTo</a>, <a href="#wForm_demo_url">url</a>, <code>email</code>, <a href="#wForm_demo_word">word</a>, <a href="#wForm_demo_login">login</a>, <a href="#wForm_demo_phoneUA">phoneUA</a>, <a href="#wForm_demo_or">or</a>, <a href="#wForm_demo_pattern">pattern</a>, <a href="#wForm_demo_remote">remote</a>, 
+											</p>
+										</div>
+					<div data-form="true" class="wForm wFormDef wFormPreloader w_block">
+						<div class="wFormRow">
+							<label for="demo_email_input" class="wLabel">Email *</label>
+							<div class="wCaption">Ваш email!</div>
+							<div class="wFormInput">
+								<input class="wInput" required type="email" name="demo_email_input" id="demo_email_input" placeholder="Ваш email" data-rule-email="true">
+								<div class="inpInfo">Email *</div>
+							</div>
+						</div>
+						<div class="wFormRow w_last">
+							<button class="wSubmit wBtn w_success">Подтверждение</button>
+							<button class="wReset wBtn w_danger">Сброс</button>
+						</div>
+					</div>
+										<div class="wTxt">
+											<h3 id="wForm_demo_word">word</h3>
+											<p><a href="#wForm_demo_required">required</a>, <a href="#wForm_demo_digits">digits</a>, <a href="#wForm_demo_number">number</a>, <a href="#wForm_demo_min">min</a>, <a href="#wForm_demo_max">max</a>, <a href="#wForm_demo_range">range</a>, <a href="#wForm_demo_minlength">minlength</a>, <a href="#wForm_demo_maxlength">maxlength</a>, <a href="#wForm_demo_rangelength">rangelength</a>, <a href="#wForm_demo_filetype">filetype</a>, <a href="#wForm_demo_filesize">filesize</a>, <a href="#wForm_demo_filesizeEach">filesizeEach</a>, <a href="#wForm_demo_password">password</a>, <a href="#wForm_demo_equalTo">equalTo</a>, <a href="#wForm_demo_url">url</a>, <a href="#wForm_demo_email">email</a>, <code>word</code>, <a href="#wForm_demo_login">login</a>, <a href="#wForm_demo_phoneUA">phoneUA</a>, <a href="#wForm_demo_or">or</a>, <a href="#wForm_demo_pattern">pattern</a>, <a href="#wForm_demo_remote">remote</a>, 
+											</p>
+										</div>
+					<div data-form="true" class="wForm wFormDef wFormPreloader w_block">
+						<div class="wFormRow">
+							<label for="demo_word_input" class="wLabel">Word *</label>
+							<div class="wCaption">ФИО не должно содержать цыфры, знаки препинания и спец. символы!</div>
+							<div class="wFormInput">
+								<input class="wInput" required type="text" name="demo_word_input" id="demo_word_input" placeholder="ФИО" data-rule-word="true">
+								<div class="inpInfo">Word *</div>
+							</div>
+						</div>
+						<div class="wFormRow w_last">
+							<button class="wSubmit wBtn w_success">Подтверждение</button>
+							<button class="wReset wBtn w_danger">Сброс</button>
+						</div>
+					</div>
+										<div class="wTxt">
+											<h3 id="wForm_demo_login">login</h3>
+											<p><a href="#wForm_demo_required">required</a>, <a href="#wForm_demo_digits">digits</a>, <a href="#wForm_demo_number">number</a>, <a href="#wForm_demo_min">min</a>, <a href="#wForm_demo_max">max</a>, <a href="#wForm_demo_range">range</a>, <a href="#wForm_demo_minlength">minlength</a>, <a href="#wForm_demo_maxlength">maxlength</a>, <a href="#wForm_demo_rangelength">rangelength</a>, <a href="#wForm_demo_filetype">filetype</a>, <a href="#wForm_demo_filesize">filesize</a>, <a href="#wForm_demo_filesizeEach">filesizeEach</a>, <a href="#wForm_demo_password">password</a>, <a href="#wForm_demo_equalTo">equalTo</a>, <a href="#wForm_demo_url">url</a>, <a href="#wForm_demo_email">email</a>, <a href="#wForm_demo_word">word</a>, <code>login</code>, <a href="#wForm_demo_phoneUA">phoneUA</a>, <a href="#wForm_demo_or">or</a>, <a href="#wForm_demo_pattern">pattern</a>, <a href="#wForm_demo_remote">remote</a>, 
+											</p>
+										</div>
+					<div data-form="true" class="wForm wFormDef wFormPreloader w_block">
+						<div class="wFormRow">
+							<label for="demo_login_input" class="wLabel">Login *</label>
+							<div class="wCaption">Логин не должен содержать пробельные символы!</div>
+							<div class="wFormInput">
+								<input class="wInput" required type="text" name="demo_login_input" id="demo_login_input" placeholder="Ваш login" data-rule-login="true">
+								<div class="inpInfo">Login *</div>
+							</div>
+						</div>
+						<div class="wFormRow w_last">
+							<button class="wSubmit wBtn w_success">Подтверждение</button>
+							<button class="wReset wBtn w_danger">Сброс</button>
+						</div>
+					</div>
+										<div class="wTxt">
+											<h3 id="wForm_demo_phoneUA">phoneUA</h3>
+											<p><a href="#wForm_demo_required">required</a>, <a href="#wForm_demo_digits">digits</a>, <a href="#wForm_demo_number">number</a>, <a href="#wForm_demo_min">min</a>, <a href="#wForm_demo_max">max</a>, <a href="#wForm_demo_range">range</a>, <a href="#wForm_demo_minlength">minlength</a>, <a href="#wForm_demo_maxlength">maxlength</a>, <a href="#wForm_demo_rangelength">rangelength</a>, <a href="#wForm_demo_filetype">filetype</a>, <a href="#wForm_demo_filesize">filesize</a>, <a href="#wForm_demo_filesizeEach">filesizeEach</a>, <a href="#wForm_demo_password">password</a>, <a href="#wForm_demo_equalTo">equalTo</a>, <a href="#wForm_demo_url">url</a>, <a href="#wForm_demo_email">email</a>, <a href="#wForm_demo_word">word</a>, <a href="#wForm_demo_login">login</a>, <code>phoneUA</code>, <a href="#wForm_demo_or">or</a>, <a href="#wForm_demo_pattern">pattern</a>, <a href="#wForm_demo_remote">remote</a>, 
+											</p>
+										</div>
+					<div data-form="true" class="wForm wFormDef wFormPreloader w_block">
+						<div class="wFormRow">
+							<label for="demo_phoneua_input" class="wLabel">Phone ua *</label>
+							<div class="wCaption">Телефон UA - <a href="https://docs.google.com/document/d/12DSU2wcAbohM_lmRHOe1JvHE1Lwb8So4NkjMkOqMdvQ/edit" target="_blank">телефоны валидация</a> (авт. Алексей Гринько)</div>
+							<div class="wFormInput">
+								<input class="wInput" required type="tel" name="demo_phoneua_input" id="demo_phoneua_input" placeholder="Телефон укр. формата" data-rule-phoneua="true">
+								<div for="demo_phoneua_input" class="inpInfo">Phone ua *</div>
+							</div>
+						</div>
+						<div class="wFormRow w_last">
+							<button class="wSubmit wBtn w_success">Подтверждение</button>
+							<button class="wReset wBtn w_danger">Сброс</button>
+						</div>
+					</div>
+										<div class="wTxt">
+											<h3 id="wForm_demo_or">or</h3>
+											<p><a href="#wForm_demo_required">required</a>, <a href="#wForm_demo_digits">digits</a>, <a href="#wForm_demo_number">number</a>, <a href="#wForm_demo_min">min</a>, <a href="#wForm_demo_max">max</a>, <a href="#wForm_demo_range">range</a>, <a href="#wForm_demo_minlength">minlength</a>, <a href="#wForm_demo_maxlength">maxlength</a>, <a href="#wForm_demo_rangelength">rangelength</a>, <a href="#wForm_demo_filetype">filetype</a>, <a href="#wForm_demo_filesize">filesize</a>, <a href="#wForm_demo_filesizeEach">filesizeEach</a>, <a href="#wForm_demo_password">password</a>, <a href="#wForm_demo_equalTo">equalTo</a>, <a href="#wForm_demo_url">url</a>, <a href="#wForm_demo_email">email</a>, <a href="#wForm_demo_word">word</a>, <a href="#wForm_demo_login">login</a>, <a href="#wForm_demo_phoneUA">phoneUA</a>, <code>or</code>, <a href="#wForm_demo_pattern">pattern</a>, <a href="#wForm_demo_remote">remote</a>, 
+											</p>
+										</div>
+					<div data-form="true" class="wForm wFormDef wFormPreloader w_block">
+						<div class="wFormRow">
+							<label for="demo_email_or_phone" class="wLabel">Email or Phone *</label>
+							<div class="wCaption">Ваш email!</div>
+							<div class="wFormInput">
+								<input class="wInput email_or_phone" type="email" name="demo_email_or_phone" id="demo_email_or_phone" placeholder="Ваш email" data-rule-email="true" data-rule-or="email_or_phone" data-msg-or="Введите e-mail или номер телефона." data-msg-required="Введите номер телефона или e-mail.">
+								<div class="inpInfo">Email or Phone *</div>
+							</div>
+						</div>
+						<div class="wFormRow">
+							<label for="demo_phone_or_email" class="wLabel">Phone or Email *</label>
+							<div class="wCaption">Ваш телефон!</div>
+							<div class="wFormInput">
+								<input class="wInput email_or_phone" type="tel" name="demo_phone_or_email" id="demo_phone_or_email" placeholder="Ваш телефон" data-rule-phoneua="true" data-rule-or="email_or_phone" data-msg-or="Введите номер телефона или e-mail." data-msg-required="Введите номер телефона или e-mail.">
+								<div class="inpInfo">Phone or Email *</div>
+							</div>
+						</div>
+						<div class="wFormRow w_last">
+							<button class="wSubmit wBtn w_success">Подтверждение</button>
+							<button class="wReset wBtn w_danger">Сброс</button>
+						</div>
+					</div>
+										<div class="wTxt">
+											<h3 id="wForm_demo_pattern">pattern</h3>
+											<p><a href="#wForm_demo_required">required</a>, <a href="#wForm_demo_digits">digits</a>, <a href="#wForm_demo_number">number</a>, <a href="#wForm_demo_min">min</a>, <a href="#wForm_demo_max">max</a>, <a href="#wForm_demo_range">range</a>, <a href="#wForm_demo_minlength">minlength</a>, <a href="#wForm_demo_maxlength">maxlength</a>, <a href="#wForm_demo_rangelength">rangelength</a>, <a href="#wForm_demo_filetype">filetype</a>, <a href="#wForm_demo_filesize">filesize</a>, <a href="#wForm_demo_filesizeEach">filesizeEach</a>, <a href="#wForm_demo_password">password</a>, <a href="#wForm_demo_equalTo">equalTo</a>, <a href="#wForm_demo_url">url</a>, <a href="#wForm_demo_email">email</a>, <a href="#wForm_demo_word">word</a>, <a href="#wForm_demo_login">login</a>, <a href="#wForm_demo_phoneUA">phoneUA</a>, <a href="#wForm_demo_or">or</a>, <code>pattern</code>, <a href="#wForm_demo_remote">remote</a>, 
+											</p>
+										</div>
+					<div data-form="true" class="wForm wFormDef wFormPreloader w_block">
+						<div class="wFormRow">
+							<label for="demo_pattern_input" class="wLabel">Pattern *</label>
+							<div class="wCaption">Задайте значение по маске [0-9]{3} <br> читай <a href="http://htmlbook.ru/html/input/pattern" target="_blank">Атрибут pattern</a></div>
+							<div class="wFormInput">
+								<input class="wInput" required type="text" name="demo_pattern_input" id="demo_pattern_input" placeholder="[0-9]{3}" data-rule-pattern="[0-9]{3}" data-msg-pattern="Укажите 3 цифры">
+								<div class="inpInfo">Pattern *</div>
+							</div>
+						</div>
+						<div class="wFormRow w_last">
+							<button class="wSubmit wBtn w_success">Подтверждение</button>
+							<button class="wReset wBtn w_danger">Сброс</button>
+						</div>
+					</div>
+										<div class="wTxt">
+											<h3 id="wForm_demo_remote">remote</h3>
+											<p><a href="#wForm_demo_required">required</a>, <a href="#wForm_demo_digits">digits</a>, <a href="#wForm_demo_number">number</a>, <a href="#wForm_demo_min">min</a>, <a href="#wForm_demo_max">max</a>, <a href="#wForm_demo_range">range</a>, <a href="#wForm_demo_minlength">minlength</a>, <a href="#wForm_demo_maxlength">maxlength</a>, <a href="#wForm_demo_rangelength">rangelength</a>, <a href="#wForm_demo_filetype">filetype</a>, <a href="#wForm_demo_filesize">filesize</a>, <a href="#wForm_demo_filesizeEach">filesizeEach</a>, <a href="#wForm_demo_password">password</a>, <a href="#wForm_demo_equalTo">equalTo</a>, <a href="#wForm_demo_url">url</a>, <a href="#wForm_demo_email">email</a>, <a href="#wForm_demo_word">word</a>, <a href="#wForm_demo_login">login</a>, <a href="#wForm_demo_phoneUA">phoneUA</a>, <a href="#wForm_demo_or">or</a>, <a href="#wForm_demo_pattern">pattern</a>, <code>remote</code>, 
+											</p>
+										</div>
+					<div data-form="true" class="wForm wFormDef wFormPreloader w_block">
+						<div class="wFormRow">
+							<label for="demo_remote_email" class="wLabel">Remote Email *</label>
+							<div class="wCaption">demo@site.com - использовать нельзя</div>
+							<div class="wFormInput">
+								<input class="wInput" required type="email" name="demo_remote_email" id="demo_remote_email" placeholder="Укажите свой email" data-rule-email="true" data-rule-remote="form/wForm-demo-remote-email.php">
+								<div for="demo_remote_email" class="inpInfo">Remote Email *</div>
+							</div>
+						</div>
+						<div class="wFormRow w_last">
+							<button class="wSubmit wBtn w_success">Подтверждение</button>
+							<button class="wReset wBtn w_danger">Сброс</button>
+						</div>
+					</div>
+				</div>
+				<!-- .wConteiner -->
+			</div>
+		</div>
+		<div class="page-footer clearfix">
+			<div class="page-size clearfix">
+				<div class="vote-us">
+					<div class="vote-us_title">Оцените нас!</div>
+					<div class="vote-us_buttons">
+						<div class="vote-us_button">
+							<div id="vk_like"></div>
+							<script type="text/javascript">
+								VK.Widgets.Like("vk_like", {
+									type: "mini",
+									pageUrl: "http://bolshe.com.ua"
+								});
+							</script>
+						</div>
+						<div class="vote-us_button">
+							<div data-href="http://bolshe.com.ua" data-width="100" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" class="fb-like"></div>
+						</div>
+						<div class="vote-us_button">
+							<div data-annotation="bubble" data-href="http://bolshe.com.ua" class="g-plusone"></div>
+						</div>
+						<div><a href="https://twitter.com/share" data-url="http://bolshe.com.ua" data-text="Купить музыкальные инструменты и оборудование бу по приемлемой цене в Украине" class="twitter-share-button">Tweet</a></div>
+						<script>
+							!function (d, s, id) {
+								var js, fjs = d.getElementsByTagName(s)[0],
+										p = /^http:/.test(d.location) ? 'http' : 'https';
+								if (!d.getElementById(id)) {
+									js = d.createElement(s);
+									js.id = id;
+									js.src = p + '://platform.twitter.com/widgets.js';
+									fjs.parentNode.insertBefore(js, fjs);
+								}
+							}(document, 'script', 'twitter-wjs');
+						</script>
+					</div>
+				</div>
+				<ul class="footer-nav">
+					<li class="footer-nav_item"><a href="/pro-bolshe" class="footer-nav_link">Про bolshe</a></li>
+					<li class="footer-nav_item"><a href="/pravila-sajta" class="footer-nav_link">Правила сайта</a></li>
+					<li class="footer-nav_item"><a href="/articles" class="footer-nav_link">Статьи</a></li>
+					<li class="footer-nav_item"><a href="/callback" class="footer-nav_link">Обратная связь</a></li>
+				</ul>
+				<div class="footer-logo"><img src="images/logo.png" alt="">
+					<div class="footer-logo_copyright">© 2015 bolshe. Все права защищены</div>
+				</div>
+			</div>
+		</div>
+		<div id="overlay-hide"></div>
+		<!-- .wFooter-->
+		<!-- WezomDefs -->
+		<!-- script disabled message -->
+		<noscript>
+			<input id="wzmMsg_JsClose" type="checkbox" title="Закрыть">
+			<div id="wzmMsg_JsInform" class="wzmMsg_Wrapp">
+				<div class="wzmMsg_Text">
+					<p>В Вашем браузере <strong>отключен JavaScript!</strong> Для корректной работы с сайтом необходима поддержка Javascript.</p>
+					<p>Мы рекомендуем Вам включить использование JavaScript в настройках вашего браузера.</p>
+				</div>
+				<a href="http://wezom.com.ua/" target="_blank" title="Студия Wezom" class="wzmMsg_Link">
+					<img src="pic/wezom-info-red.gif" width="50" height="18" alt="Студия Wezom">
+				</a>
+				<label for="wzmMsg_JsClose" class="wzmMsg_Close"><span>&times;</span></label>
+			</div>
+		</noscript>
+		<!-- old browser detect -->
+		<script>function $wzmOldInit(){var t=document.createElement("script");t.src="http://verstka.vps.kherson.ua/sources/plugins/wold/wold.js",document.body.appendChild(t)}try{document.addEventListener("DOMContentLoaded",$wzmOldInit,!1)}catch(e){window.attachEvent("onload",$wzmOldInit)}
+		</script>
+		<!-- svg sprite -->
+		<script>window.wSpriteSvg=function(t,e,i){var n={ns:"http://www.w3.org/2000/svg",initialize:function(e,i){if(this.prefix="wSpriteSvg_"+e.id,t.localSupport){var n=t.localStorage[this.prefix];if(n){var s=JSON.parse(n);this.setSprite(e,s)}else this.getJson(e,i)}else this.getJson(e,i)},getJson:function(e,i){var n=new XMLHttpRequest,s=this;n.open("GET",i,!0),n.setRequestHeader("Content-type","application/json"),n.onreadystatechange=function(){if(4==n.readyState&&200==n.status){var i=JSON.parse(n.responseText);s.setSprite(e,i),t.localSupport&&t.localWrite(s.prefix,JSON.stringify(i))}},n.send()},buildElem:function(t,i){var n,s,r;for(n in i)for(s in i[n]){var o=e.createElementNS(this.ns,s);for(r in i[n][s])"stops"===r?this.buildElem(o,i[n][s][r]):"innerHTML"==r?o.innerHTML=i[n][s][r]:o.setAttributeNS(null,r,i[n][s][r]);t.appendChild(o)}},setSprite:function(t,i){for(var n in i){var s=i[n],r=e.createElementNS(this.ns,"symbol");r.setAttributeNS(null,"id",n),r.setAttributeNS(null,"viewBox",s.viewBox),this.buildElem(r,s.symbol),s.hasOwnProperty("gradients")&&this.buildElem(t,s.gradients),t.appendChild(r)}this.isDone(t,i)},isDone:function(t,e){}};return n}(this,this.document);
+		</script>
+		<!-- изменить id у svg элемента -> #sprite_SiteName -->
+		<svg id="sprite_SiteName" xmlns="http://www.w3.org/2000/svg" style="height:0; width:0; visibility:hidden; position:absolute; top:0; left:0;" onload="wSpriteSvg.initialize(this,'jsons/svgsprite.json')"/>
+	</body>
+</html>

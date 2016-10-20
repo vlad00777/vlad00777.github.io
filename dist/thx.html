@@ -62,102 +62,162 @@
 	</head>
 	<body class="indexPage">
 		<div class="wWrapper">
-			<div class="additional-container">
-				<div class="page-size">
-					<div class="additional-top"><a href="" class="exit-link">Выход</a><a href="" data-url="hidden/login.php" class="personal-area-link popup-link">Вход / Регистрация</a>
-						<div class="breadcrumbs"><a href="">Главная</a><span>Добавление объявления</span></div>
-					</div>
-					<div class="additional-title"><a href="" class="logo--additional"><img src="images/logo.png" alt=""></a>
-						<h1 class="h1 h1--center h1--additional"><span>Добавление объявления</span></h1>
-					</div>
+			<div id="fb-root">
+				<script>
+					(function (d, s, id) {
+						var js, fjs = d.getElementsByTagName(s)[0];
+						if (d.getElementById(id)) return;
+						js = d.createElement(s);
+						js.id = id;
+						js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.3";
+						fjs.parentNode.insertBefore(js, fjs);
+					}(document, 'script', 'facebook-jssdk'));
+				</script>
+				<script type="text/javascript">
+					(function () {
+						if (window.pluso)if (typeof window.pluso.start == "function") return;
+						if (window.ifpluso == undefined) {
+							window.ifpluso = 1;
+							var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+							s.type = 'text/javascript';
+							s.charset = 'UTF-8';
+							s.async = true;
+							s.src = ('https:' == window.location.protocol ? 'https' : 'http') + '://share.pluso.ru/pluso-like.js';
+							var h = d[g]('body')[0];
+							h.appendChild(s);
+						}
+					})();
+				</script>
+				<div id="mmenu" class="offset-nav">
+					<ul class="offset-nav_list">
+						<li class="offset-nav_list-item all-cat-mob"><a href="">Все категории</a>
+							<ul>
+								<li><a href="#">Категория 1</a></li>
+								<li><a href="#">Категория 2</a></li>
+								<li><a href="#">Категория 3</a></li>
+								<li><a href="#">Категория 4</a></li>
+							</ul>
+						</li>
+						<li class="offset-nav_list-item"><a href="http://bolshe.com.ua" class="offset-nav_list-link">Доска обявлений</a></li>
+						<li class="offset-nav_list-item"><a href="http://windows.microsoft.com/ru-ru/windows7/record-audio-with-sound-recorder" class="offset-nav_list-link">Звукозапись</a></li>
+						<li class="offset-nav_list-item"><a href="http://www.studzona.com/teacher" class="offset-nav_list-link">Преподаватели</a></li>
+						<li class="offset-nav_list-item"><a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BC%D0%BE%D0%BD%D1%82" class="offset-nav_list-link">Ремонт</a></li>
+						<li class="offset-nav_list-item"><a href="http://13.ua/izgotovlenie-naruzhnoj-i-vnutrennej-reklamy" class="offset-nav_list-link">Изготовление</a></li>
+						<li class="offset-nav_list-item offset-nav_list-item--has-child"><a href="#" class="offset-nav_list-link">Другое</a>
+							<ul class="offset-subnav">
+								<li class="offset-subnav_item"><a href="http://prokat-arenda.com.ua/" class="offset-subnav_link">Прокат/Аренда</a></li>
+								<li class="offset-subnav_item"><a href="http://www.pravda.com.ua/rus/news/2016/04/23/7106516/?attempt=1" class="offset-subnav_link">Учебные заведения</a></li>
+							</ul>
+						</li>
+						<li class="offset-nav_list-item mob-search"><span>Поиск:</span><span data-form="true" class="search-mobile wForm"><span class="wFormRow"><span class="wFormInput">
+										<input required class="wInput"></span></span><span class="wFormRow"><span class="wSubmit lupa-button"></span></span></span></li>
+					</ul>
+				</div>
+				<div class="offset-overlay"></div>
+			</div>
+			<div class="page-header clearfix">
+				<div class="page-size clearfix"><a href="/" class="page-header_logo"><img src="images/logo.png" alt=""></a>
+					<ul class="main-nav clearfix">
+						<li class="main-nav_item"><a href="http://bolshe.com.ua" target="_blank" class="main-nav_link"><span class="main-nav_link-icon"><img src="images/sitemenu/ad35a6610ee9b5a311e899a035f5938b.png" alt=""></span><span class="main-nav_link-text">Доска обявлений</span></a></li>
+						<li class="main-nav_item"><a href="http://windows.microsoft.com/ru-ru/windows7/record-audio-with-sound-recorder" class="main-nav_link"><span class="main-nav_link-icon"><img src="images/sitemenu/0c833c44eb6fa96caa787998cdd197d4.png" alt=""></span><span class="main-nav_link-text">Звукозапись</span></a></li>
+						<li class="main-nav_item"><a href="http://www.studzona.com/teacher" class="main-nav_link"><span class="main-nav_link-icon"><img src="images/sitemenu/923211bcbc5637d09b4a681545290ce0.png" alt=""></span><span class="main-nav_link-text">Преподаватели</span></a></li>
+						<li class="main-nav_item"><a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BC%D0%BE%D0%BD%D1%82" class="main-nav_link"><span class="main-nav_link-icon"><img src="images/sitemenu/6f7e7e6b2d4d87912bc741fe6f9a94cb.png" alt=""></span><span class="main-nav_link-text">Ремонт</span></a></li>
+						<li class="main-nav_item"><a href="http://13.ua/izgotovlenie-naruzhnoj-i-vnutrennej-reklamy" class="main-nav_link"><span class="main-nav_link-icon"><img src="images/sitemenu/c0bc3bf3005fd429ca44a068e3e9da1c.png" alt=""></span><span class="main-nav_link-text">Изготовление</span></a></li>
+						<li class="main-nav_item main-nav_item--has-children"><a href="" class="main-nav_link"><span class="main-nav_link-icon"><img src="images/sitemenu/92ffdb55e4ac26c0b57eaf3f16036ff5.png" alt=""></span><span class="main-nav_link-text">Другое</span></a>
+							<ul class="main-subnav">
+								<li class="main-subnav_item"><a href="http://prokat-arenda.com.ua/" class="main-subnav_link">Прокат/Аренда</a></li>
+								<li class="main-subnav_item"><a href="http://www.pravda.com.ua/rus/news/2016/04/23/7106516/?attempt=1" class="main-subnav_link">Учебные заведения</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="header-user-nav">
+						<div class="currency-list"><a href="#" class="currency-list_currency is-active">UAH</a><a href="#" class="currency-list_currency">RUB</a><a href="#" class="currency-list_currency">USD</a></div>
+						<div class="personal-area-star"><a href="#"></a><span>0</span></div><a href="" data-url="hidden/enterPopup.php" class="personal-area-link popup-link">Вход / Регистрация</a>
+					</div><a href="#mmenu" class="hamburger-button"><span></span></a>
 				</div>
 			</div>
 			<!-- .wHeader -->
 			<div class="wContainer">
-				<div class="page-wrapper">
-					<div class="page-container">
-						<div class="page-size">
-							<div class="yellow-block">
-								<div class="yellow-block_left"><img src="images/sucess-add.png"></div>
-								<div class="yellow-block_right">
-									<div class="yellow-block_title">Ваше объявление&nbsp;<a href="#">Гитара Cort AC100 BKS</a><b>успешно добавлено!</b></div>
-									<div class="yellow-block_goto">На сайт bolshe.com.ua</div>
-								</div>
-							</div>
-							<div class="navigate-line"><a href="#" class="button button--red"><span class="button_plus"></span>Добавить еще объявление</a><a href="#" class="gray-button gray-button--big">Посмотреть объявление</a><a href="#" class="gray-button gray-button--big">Перейти в личный кабинет</a><a href="#" class="gray-button gray-button--big">Перейти на главную</a></div>
-							<div class="up-title">Воспользуйтесь дополнительными услугами <br> для улучшения Вашего объявления:</div>
-							<div class="up-variants tac">
-								<div class="block type-top">
-									<div class="head">
-										<label>
-											<input type="checkbox"><span></span>ТОП объявлений
-										</label>
-									</div>
-									<div class="main">
-										<div class="logo"></div>
-										<ul>
-											<li>Ваше объявление расположено вверху списка.</li>
-											<li>В 5 раз больше просмотров и показов.</li>
-											<li>Товары продаются быстрей и чаще.</li>
-										</ul>
-										<div class="period fbb1Item4"><span class="blacked">Период в ТОП</span>
-											<select id="periodSelect" name="name212" data-name="period_days" data-perday="2">
-												<option value="1" data-day="1">1</option>
-												<option value="3" data-day="3">3</option>
-												<option value="5" data-day="5">5</option>
-												<option value="7" data-day="7">7</option>
-												<option value="10" data-day="10">10</option>
-												<option value="14" data-day="14">14</option>
-												<option value="21" data-day="21">21</option>
-												<option value="25" data-day="25">25</option>
-												<option value="30" data-day="30">30</option>
-											</select><span class="blacked">дня</span>
-										</div>
-									</div>
-									<div class="footer">
-										<div class="price">+<span>2</span> грн</div>
-									</div>
-								</div>
-								<div class="block type-color">
-									<div class="head">
-										<label>
-											<input type="checkbox"><span></span>ТОП объявлений
-										</label>
-									</div>
-									<div class="main">
-										<div class="logo"></div>
-										<ul>
-											<li>Ваше объявление выделено ярким фоном.</li>
-											<li>Больше привлекает внимание.</li>
-											<li>Выделяется на весь срок публикации.</li>
-										</ul>
-									</div>
-									<div class="footer">
-										<div class="price">+<span>2</span> грн</div>
-									</div>
-								</div>
-								<div class="block type-fast">
-									<div class="head">
-										<label>
-											<input type="checkbox"><span></span>Срочно
-										</label>
-									</div>
-									<div class="main">
-										<div class="logo"></div>
-										<ul>
-											<li>К объявлению добавляется маркер “срочно”.</li>
-											<li>Ваше объявление более заметно в списке.</li>
-											<li>Выделяется на весь срок публикации.</li>
-										</ul>
-									</div>
-									<div class="footer">
-										<div class="price">+<span>2</span> грн</div>
-									</div>
-								</div>
-							</div>
-							<div class="rocket tac"><a href="#" class="white-button to-improve -info">Улучшить</a></div>
+				<div class="page-size">
+					<div class="yellow-block">
+						<div class="yellow-block_left"><img src="images/sucess-add.png"></div>
+						<div class="yellow-block_right">
+							<div class="yellow-block_title">Ваше объявление&nbsp;<a href="#">Гитара Cort AC100 BKS</a><b>успешно добавлено!</b></div>
+							<div class="yellow-block_goto">На сайт bolshe.com.ua</div>
 						</div>
 					</div>
+					<div class="navigate-line"><a href="#" class="button button--red"><span class="button_plus"></span>Добавить еще объявление</a><a href="#" class="gray-button gray-button--big">Посмотреть объявление</a><a href="#" class="gray-button gray-button--big">Перейти в личный кабинет</a><a href="#" class="gray-button gray-button--big">Перейти на главную</a></div>
+					<div class="up-title">Воспользуйтесь дополнительными услугами <br> для улучшения Вашего объявления:</div>
+					<div class="up-variants tac">
+						<div class="block type-top">
+							<div class="head">
+								<label>
+									<input type="checkbox"><span></span>ТОП объявлений
+								</label>
+							</div>
+							<div class="main">
+								<div class="logo"></div>
+								<ul>
+									<li>Ваше объявление расположено вверху списка.</li>
+									<li>В 5 раз больше просмотров и показов.</li>
+									<li>Товары продаются быстрей и чаще.</li>
+								</ul>
+								<div class="period fbb1Item4"><span class="blacked">Период в ТОП</span>
+									<select id="periodSelect" name="name212" data-name="period_days" data-perday="2">
+										<option value="1" data-day="1">1</option>
+										<option value="3" data-day="3">3</option>
+										<option value="5" data-day="5">5</option>
+										<option value="7" data-day="7">7</option>
+										<option value="10" data-day="10">10</option>
+										<option value="14" data-day="14">14</option>
+										<option value="21" data-day="21">21</option>
+										<option value="25" data-day="25">25</option>
+										<option value="30" data-day="30">30</option>
+									</select><span class="blacked">дня</span>
+								</div>
+							</div>
+							<div class="footer">
+								<div class="price">+<span>2</span> грн</div>
+							</div>
+						</div>
+						<div class="block type-color">
+							<div class="head">
+								<label>
+									<input type="checkbox"><span></span>ТОП объявлений
+								</label>
+							</div>
+							<div class="main">
+								<div class="logo"></div>
+								<ul>
+									<li>Ваше объявление выделено ярким фоном.</li>
+									<li>Больше привлекает внимание.</li>
+									<li>Выделяется на весь срок публикации.</li>
+								</ul>
+							</div>
+							<div class="footer">
+								<div class="price">+<span>2</span> грн</div>
+							</div>
+						</div>
+						<div class="block type-fast">
+							<div class="head">
+								<label>
+									<input type="checkbox"><span></span>Срочно
+								</label>
+							</div>
+							<div class="main">
+								<div class="logo"></div>
+								<ul>
+									<li>К объявлению добавляется маркер “срочно”.</li>
+									<li>Ваше объявление более заметно в списке.</li>
+									<li>Выделяется на весь срок публикации.</li>
+								</ul>
+							</div>
+							<div class="footer">
+								<div class="price">+<span>2</span> грн</div>
+							</div>
+						</div>
+					</div>
+					<div class="rocket tac"><a href="#" class="white-button to-improve -info">Улучшить</a></div>
 				</div>
 				<!-- .wConteiner -->
 			</div>

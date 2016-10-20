@@ -270,7 +270,7 @@ jQuery(document).ready(function(){
 
     wHTML.validation();
 
-    $('body').on('click', '.catalog-item_star', function(e){
+    $('body').on('click', '.add_to_wish_list', function(e){
         e.preventDefault();
         $(this).find('.star').toggleClass('star--active');
     });
@@ -288,17 +288,17 @@ jQuery(document).ready(function(){
 
     var isOffsetNavVisible = false;
 
-    $('.hamburger-button').on('click', function(){
-        if(isOffsetNavVisible){
-            isOffsetNavVisible = false;
-            $('.offset-nav').removeClass('offset-nav--active');
-            $('.offset-overlay').removeClass('offset-overlay--show');
-        } else {
-            isOffsetNavVisible = true;
-            $('.offset-nav').addClass('offset-nav--active');
-            $('.offset-overlay').addClass('offset-overlay--show');
-        }
-    });
+    // $('.hamburger-button').on('click', function(){
+    //     if(isOffsetNavVisible){
+    //         isOffsetNavVisible = false;
+    //         $('.offset-nav').removeClass('offset-nav--active');
+    //         $('.offset-overlay').removeClass('offset-overlay--show');
+    //     } else {
+    //         isOffsetNavVisible = true;
+    //         $('.offset-nav').addClass('offset-nav--active');
+    //         $('.offset-overlay').addClass('offset-overlay--show');
+    //     }
+    // });
 
     $('.offset-overlay').on('click', function(){
         isOffsetNavVisible = false;
@@ -940,7 +940,114 @@ jQuery(document).ready(function(){
         }
     });
 
-    if($.cookie('hidden-money').length) {
+    $('body').on('click','.js-hidden',function(){
+        $(this).hide();
+    });
+
+    $('body').on('click', '.js-skype',function(e){
+        e.preventDefault();
+        var el = $(this);
+        var number = el.data('skype');
+        el.attr('href','call:'+number);
+        el.find('span').text(number);
+    });
+
+    $('body').on('click','.js-writeAdmin',function(){
+        var magnificPopup = $.magnificPopup.instance;
+        magnificPopup.close();
+        $('html, body').animate({
+            scrollTop: $("#feedback").offset().top
+        }, 1000);
+    });
+
+
+    $('body').on('click','.js-problem-popup',function(){
+        var magnificPopup = $.magnificPopup.instance;
+        magnificPopup.close();
+        setTimeout(function(){
+            $('.js-problem').trigger('click');
+        },300);
+    });
+
+    $('body').on('click','.js-add-phone',function(){
+        var el = $(this);
+        var max = el.data('max');
+        var count = $('.jsTel').length;
+
+        if(count < max) {
+            var row = el.closest('.jsTel');
+            var nrow = row.clone();
+            nrow.find('.-warn').removeClass('-warn');
+            nrow.find('.js-add-phone').removeClass('js-add-phone').addClass('js-remove-phone -remove');
+            nrow.insertAfter(row);
+        }
+    });
+
+
+    $('body').on('click','.js-add-skype',function(){
+        var el = $(this);
+        var max = el.data('max');
+        var count = $('.jsSkype').length;
+
+        if(count < max) {
+            var row = el.closest('.jsSkype');
+            var nrow = row.clone();
+            nrow.find('.-warn').removeClass('-warn');
+            nrow.find('.js-add-skype').removeClass('js-add-skype').addClass('js-remove-skype -remove');
+            nrow.insertAfter(row);
+        }
+    });
+
+    $('body').on('click','.js-remove-phone',function(){
+        var el = $(this);
+        el.closest('.js-add').remove();
+    });
+
+    $('body').on('click','.js-remove-skype',function(){
+        var el = $(this);
+        el.closest('.js-add').remove();
+    });
+
+
+    Dropzone.options.myAwesomeDropzone = {
+        autoProcessQueue: false,
+        uploadMultiple: true,
+        parallelUploads: 8,
+        maxFiles: 8,
+        previewsContainer:".dropzone-previews",
+        init: function() {
+            var myDropzone = this;
+
+            $(".submitPhoto").click(function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                myDropzone.processQueue();
+            });
+        }
+    };
+
+    $("#mmenu").mmenu({
+        "extensions": [
+            "pagedim-black"
+        ],
+        navbar: {
+            title: "Меню"
+        },
+        "navbars": [
+            {
+                "position": "bottom",
+                "content": [
+                    "<div class='currency-list'><span>Валюта:</span><a href='#' class='currency-list_currency is-active'>UAH</a><a href='#' class='currency-list_currency'>RUB</a><a href='#' class='currency-list_currency'>USD</a></div>"
+                ]
+            }
+        ]
+    });
+
+    $(window).resize(function(){
+        wHTML.seoSet();
+    });
+
+    if($.cookie('hidden-money')) {
         $('.fixed-money').hide();
     }
 

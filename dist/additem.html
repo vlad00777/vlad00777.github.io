@@ -88,8 +88,16 @@
 						}
 					})();
 				</script>
-				<div class="offset-nav">
+				<div id="mmenu" class="offset-nav">
 					<ul class="offset-nav_list">
+						<li class="offset-nav_list-item all-cat-mob"><a href="">Все категории</a>
+							<ul>
+								<li><a href="#">Категория 1</a></li>
+								<li><a href="#">Категория 2</a></li>
+								<li><a href="#">Категория 3</a></li>
+								<li><a href="#">Категория 4</a></li>
+							</ul>
+						</li>
 						<li class="offset-nav_list-item"><a href="http://bolshe.com.ua" class="offset-nav_list-link">Доска обявлений</a></li>
 						<li class="offset-nav_list-item"><a href="http://windows.microsoft.com/ru-ru/windows7/record-audio-with-sound-recorder" class="offset-nav_list-link">Звукозапись</a></li>
 						<li class="offset-nav_list-item"><a href="http://www.studzona.com/teacher" class="offset-nav_list-link">Преподаватели</a></li>
@@ -101,20 +109,9 @@
 								<li class="offset-subnav_item"><a href="http://www.pravda.com.ua/rus/news/2016/04/23/7106516/?attempt=1" class="offset-subnav_link">Учебные заведения</a></li>
 							</ul>
 						</li>
+						<li class="offset-nav_list-item mob-search"><span>Поиск:</span><span data-form="true" class="search-mobile wForm"><span class="wFormRow"><span class="wFormInput">
+										<input required class="wInput"></span></span><span class="wFormRow"><span class="wSubmit lupa-button"></span></span></span></li>
 					</ul>
-					<p>Валюта:</p>
-					<div class="currency-list"><a href="#" class="currency-list_currency is-active">UAH</a><a href="#" class="currency-list_currency">RUB</a><a href="#" class="currency-list_currency">USD</a></div>
-					<p>Поиск:</p>
-					<div data-form="true" class="search-mobile wForm">
-						<div class="wFormRow">
-							<div class="wFormInput">
-								<input required class="wInput">
-							</div>
-						</div>
-						<div class="wFormRow">
-							<div class="wSubmit lupa-button"></div>
-						</div>
-					</div>
 				</div>
 				<div class="offset-overlay"></div>
 			</div>
@@ -136,8 +133,7 @@
 					<div class="header-user-nav">
 						<div class="currency-list"><a href="#" class="currency-list_currency is-active">UAH</a><a href="#" class="currency-list_currency">RUB</a><a href="#" class="currency-list_currency">USD</a></div>
 						<div class="personal-area-star"><a href="#"></a><span>0</span></div><a href="" data-url="hidden/enterPopup.php" class="personal-area-link popup-link">Вход / Регистрация</a>
-					</div>
-					<div class="hamburger-button"><span></span></div>
+					</div><a href="#mmenu" class="hamburger-button"><span></span></a>
 				</div>
 			</div>
 			<!-- .wHeader -->
@@ -152,7 +148,7 @@
 									<div class="main-guitar"><a data-cat="1" class="main-category js-Mcat"><span class="bg"></span><span class="cat-name">ГИТАРЫ</span></a></div>
 									<div class="main-baraban"><a data-cat="1" class="main-category js-Mcat"><span class="bg"></span><span class="cat-name">УДАРНЫЕ</span></a></div>
 									<div class="main-keyboard"><a data-cat="1" class="main-category js-Mcat"><span class="bg"></span><span class="cat-name">КЛАВИШНЫЕ</span></a></div>
-									<div class="main-scripka"><a data-cat="1" class="main-category js-Mcat"><span class="bg"></span><span class="cat-name">СМЫЧКОВЫЕ</span></a></div>
+									<div class="main-scripka"><a data-cat="1" class="main-category js-Mcat"><span style="background-image:url(images/F8kkkdR9B3A.jpg)" class="bg"></span><span class="cat-name">СМЫЧКОВЫЕ</span></a></div>
 									<div class="main-equip"><a data-cat="1" class="main-category js-Mcat"><span class="bg"></span><span class="cat-name">ОБОРУДОВАНИЕ</span></a></div>
 									<div class="main-etno"><a data-cat="1" class="main-category js-Mcat"><span class="bg"></span><span class="cat-name">ЭТНИЧЕСКИЕ</span></a></div>
 									<div class="main-duh1"><a data-cat="1" class="main-category js-Mcat"><span class="bg"></span><span class="cat-name">ДУХОВЫЕ</span></a></div>
@@ -162,7 +158,7 @@
 							<div class="jsub-cats">
 								<h2 class="sub-title">Необходимо выбрать категорию</h2>
 								<h3 class="sub-title">Выбран раздел:<span class="title js-razd">Гитары</span><span class="edit js-return"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAjVBMVEVkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGT///8d80ElAAAALXRSTlMAd/SJAU+LYRKl6cun9UN1yjF0O3P2RnH3R3D4SEL++UkwEJhKmkzBMuO5fCRk5ybyAAAAAWJLR0QuVNMQhwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAGxJREFUCNdFzukOwiAQBGAqVelBpfehloq9PPb9X88lWWH+fckkM4y5BAceeh0B4OR0FhFA7JqQiFRmpAs2lchJBQpkSaqs6obUWnU9abC63kj3EaUn0sM8UfN/kCdm0at7s4Eyu7/6en++Xj+uIQoQQIscNQAAAABJRU5ErkJggg=="><span>Изменить</span></span></h3>
-								<div class="lk-menu-blocks main-cats">
+								<div class="lk-menu-blocks main-cats lk-menu-blocks--col4">
 									<div class="main-guitar"><a data-cat="1" class="main-category js-Scat"><span class="bg"></span><span class="cat-name">ГИТАРЫ</span></a></div>
 									<div class="main-baraban"><a data-cat="1" class="main-category js-Scat"><span class="bg"></span><span class="cat-name">УДАРНЫЕ</span></a></div>
 									<div class="main-keyboard"><a data-cat="1" class="main-category js-Scat"><span class="bg"></span><span class="cat-name">КЛАВИШНЫЕ</span></a></div>
@@ -179,7 +175,7 @@
 									<div class="selected-cat_subCat">Электрогитары</div>
 									<div class="selected-cat_button">Изменить</div>
 								</div>
-								<div data-form="true" class="add-form clearfix wForm">
+								<div data-form="true" id="my-awesome-dropzone" class="add-form clearfix wForm dropzone">
 									<div class="add-form_left">
 										<div class="wFormRow -titleInfo">
 											<label for="demo_minlength_input" class="wLabel -warn">Заголовок</label>
@@ -270,7 +266,7 @@
 												<div class="inpInfo">Email автора</div>
 											</div>
 										</div>
-										<div class="col-add">
+										<div class="col-add js-add jsTel">
 											<div class="wFormRow">
 												<label for="demo_phoneua_input" class="wLabel -warn">Контактный телефон</label>
 												<div class="wFormInput">
@@ -279,7 +275,7 @@
 												</div>
 											</div>
 											<div class="wFormRow -plus">
-												<div data-max="4" class="add-plus js-add-phone"></div>
+												<div data-max="3" class="add-plus js-add-phone"></div>
 											</div>
 										</div>
 										<div class="wFormRow">
@@ -289,7 +285,24 @@
 												<div class="inpInfo">Skype автора</div>
 											</div>
 										</div>
+										<div class="col-add col-add--col3 js-add jsSkype">
+											<div class="wFormRow -link"></div>
+											<div class="wFormRow">
+												<label for="demo_phoneua_input" class="wLabel -warn">Добавить видео с <span class="red-text">YouTube</span></label>
+												<div class="wFormInput">
+													<input class="wInput" type="text" name="demo_phoneua_input" id="demo_phoneua_input" placeholder="" data-rule-url="true">
+													<div for="demo_phoneua_input" class="inpInfo">Добавить видео с </div>
+												</div>
+											</div>
+											<div class="wFormRow -plus">
+												<div data-max="3" class="add-plus js-add-skype"></div>
+											</div>
+										</div>
 									</div>
+									<div class="add-form_photo">
+										<div id="dropzone-previews"></div>
+									</div>
+									<div style="clear:both;"></div>
 									<div class="ups">
 										<div class="ups_title">Воспользуйтесь дополнительными услугами <br> для улучшения Вашего объявления:</div>
 										<div class="up-variants">
@@ -379,7 +392,7 @@
 											</div>
 										</div>
 										<div class="ups_buttons"><a href="#" class="button-preview"><span>Предпросмотр</span></a>
-											<div class="wSubmit button-plus"><span>Добавить объявление</span></div>
+											<div class="wSubmit button-plus submitPhoto"><span>Добавить объявление</span></div>
 										</div>
 									</div>
 								</div>

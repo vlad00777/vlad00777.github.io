@@ -9,13 +9,13 @@
 					<div class="dashboard-priceFavorite_price"><b>18 542</b><span>&nbsp;грн.</span></div>
 					<div class="dashboard-priceFavorite_favorite"><a href="#" class="add_to_wish_list"><span class="star"></span><span>Добавить в избранные</span></a></div>
 				</div>
-				<div class="dashboard-buttons"><a href="#" class="dashboard-buttons_toauthor">
+				<div class="dashboard-buttons"><a href="#" class="dashboard-buttons_toauthor js-writeAdmin">
 						<div class="svgHolder">
 							<svg>
 								<use xlink:href="#message-icon"/>
 							</svg>
 						</div><span>Написать автору</span></a></div>
-				<div class="flex flex--between"><a href="#" class="white-button to-improve">Улучшить</a><a href="#" class="dashboard-buttons_alert">
+				<div class="flex flex--between"><a href="#" class="white-button to-improve">Улучшить</a><a href="#" class="dashboard-buttons_alert js-problem-popup">
 						<div class="svgHolder">
 							<svg>
 								<use xlink:href="#smile-icon"/>
@@ -38,7 +38,7 @@
 								<p>+38 (095) 342 12 34</p>
 								<p>+38 (095) 342 12 34</p>
 								<div class="js-hidden"><span class="eye"></span><span>Показать</span></div>
-							</div><a href="#" class="about_link about_link--skype"><span>Показать Skype автора</span></a>
+							</div><a href="#" data-skype="0506540509" class="about_link about_link--skype js-skype"><span>Показать Skype автора</span></a>
 						</div>
 					</div>
 				</div>

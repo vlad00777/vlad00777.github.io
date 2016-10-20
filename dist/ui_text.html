@@ -88,8 +88,16 @@
 						}
 					})();
 				</script>
-				<div class="offset-nav">
+				<div id="mmenu" class="offset-nav">
 					<ul class="offset-nav_list">
+						<li class="offset-nav_list-item all-cat-mob"><a href="">Все категории</a>
+							<ul>
+								<li><a href="#">Категория 1</a></li>
+								<li><a href="#">Категория 2</a></li>
+								<li><a href="#">Категория 3</a></li>
+								<li><a href="#">Категория 4</a></li>
+							</ul>
+						</li>
 						<li class="offset-nav_list-item"><a href="http://bolshe.com.ua" class="offset-nav_list-link">Доска обявлений</a></li>
 						<li class="offset-nav_list-item"><a href="http://windows.microsoft.com/ru-ru/windows7/record-audio-with-sound-recorder" class="offset-nav_list-link">Звукозапись</a></li>
 						<li class="offset-nav_list-item"><a href="http://www.studzona.com/teacher" class="offset-nav_list-link">Преподаватели</a></li>
@@ -101,20 +109,9 @@
 								<li class="offset-subnav_item"><a href="http://www.pravda.com.ua/rus/news/2016/04/23/7106516/?attempt=1" class="offset-subnav_link">Учебные заведения</a></li>
 							</ul>
 						</li>
+						<li class="offset-nav_list-item mob-search"><span>Поиск:</span><span data-form="true" class="search-mobile wForm"><span class="wFormRow"><span class="wFormInput">
+										<input required class="wInput"></span></span><span class="wFormRow"><span class="wSubmit lupa-button"></span></span></span></li>
 					</ul>
-					<p>Валюта:</p>
-					<div class="currency-list"><a href="#" class="currency-list_currency is-active">UAH</a><a href="#" class="currency-list_currency">RUB</a><a href="#" class="currency-list_currency">USD</a></div>
-					<p>Поиск:</p>
-					<div data-form="true" class="search-mobile wForm">
-						<div class="wFormRow">
-							<div class="wFormInput">
-								<input required class="wInput">
-							</div>
-						</div>
-						<div class="wFormRow">
-							<div class="wSubmit lupa-button"></div>
-						</div>
-					</div>
 				</div>
 				<div class="offset-overlay"></div>
 			</div>
@@ -136,8 +133,7 @@
 					<div class="header-user-nav">
 						<div class="currency-list"><a href="#" class="currency-list_currency is-active">UAH</a><a href="#" class="currency-list_currency">RUB</a><a href="#" class="currency-list_currency">USD</a></div>
 						<div class="personal-area-star"><a href="#"></a><span>0</span></div><a href="" data-url="hidden/enterPopup.php" class="personal-area-link popup-link">Вход / Регистрация</a>
-					</div>
-					<div class="hamburger-button"><span></span></div>
+					</div><a href="#mmenu" class="hamburger-button"><span></span></a>
 				</div>
 			</div>
 			<!-- .wHeader -->

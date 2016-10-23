@@ -914,7 +914,9 @@ jQuery(document).ready(function(){
             el.addClass('ASCat');
             el.closest('.jsub-cats').stop().slideUp(400,function(){
 
-                $('.addForm').stop().slideDown();
+                $('.addForm').stop().slideDown(400,function(){
+                    $('.up-variants .block .main').matchHeight();
+                });
             });
         });
 
@@ -1008,15 +1010,59 @@ jQuery(document).ready(function(){
         el.closest('.js-add').remove();
     });
 
+    Dropzone.autoDiscover = false;
 
-    Dropzone.options.myAwesomeDropzone = {
+
+
+    $('#myId').dropzone({
+        url: "/file/post",
         autoProcessQueue: false,
         uploadMultiple: true,
-        parallelUploads: 8,
+        parallelUploads: 1,
+        paramName: "uploadfile",
         maxFiles: 8,
-        previewsContainer:".dropzone-previews",
+        previewsContainer: '.visualizacao',
+        maxFilesize:16,
+        acceptedFiles: ".jpeg,.jpg,.png,.gif",
+        clickable:'#pickfiles',
+        addRemoveLinks: true,
+        previewTemplate : $('.preview').html(),
         init: function() {
-            var myDropzone = this;
+
+            this.on('removedfile', function(file, json) {
+                if (this.files.length < 1) {
+                    $('.upload-info').show();
+                }
+            });
+                $('.dropzone').removeClass('dz-clickable'); // remove cursor
+                $('.dropzone')[0].removeEventListener('click', this.listeners[1].events.click);
+
+            this.on('addedfile', function(file, json) {
+                $('.upload-info').hide();
+                $("#items").sortable({
+                    items:'.dz-image-preview',
+                    cursor: 'move',
+                    opacity: 0.5,
+                    containment: '#items',
+                    distance: 20,
+                    tolerance: 'pointer'
+                });
+
+                if (this.files.length > 8) {
+                    return false;
+                }
+
+                $('#items').children('li').eq(0).find('.dz-preview').trigger('click');
+
+
+            });
+            this.on('success', function(file, json) {
+                alert('aa');
+            });
+
+            this.on('drop', function(file) {
+                console.log('File',file)
+            });
 
             $(".submitPhoto").click(function (e) {
                 e.preventDefault();
@@ -1024,7 +1070,8 @@ jQuery(document).ready(function(){
                 myDropzone.processQueue();
             });
         }
-    };
+    });
+
 
     $("#mmenu").mmenu({
         "extensions": [

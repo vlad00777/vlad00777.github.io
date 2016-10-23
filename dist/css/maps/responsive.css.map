@@ -1,0 +1,1 @@
+{"version":3,"sources":["responsive.scss"],"names":[],"mappings":"AAAA,mBAAmB","file":"responsive.css","sourcesContent":["/*responsive.scss*/\n@import '../_config';\n\n@media only screen and (max-width: 980px) {}"],"sourceRoot":"/source/"}

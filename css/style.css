@@ -1046,12 +1046,14 @@ ul {
   opacity: 0;
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
   transform: translateY(-100%);
+  left: -100%;
   overflow: hidden;
 }
 
 .popupMenu.is-opened {
   opacity: 1;
   transform: translateY(0);
+  left: 0;
 }
 
 .popupMenu__inner {
